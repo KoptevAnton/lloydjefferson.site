@@ -4,22 +4,38 @@
   | default @import url()
   |============================
 */
+
+@import url('https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500..600&display=swap');
+
 @import url('./reset.css');
-@import url('./vite-promo.css');
 @import url('./header.css');
+@import url('./hero.css');
+@import url('./about-me.css');
+@import url('./benefits.css');
+@import url('./projects.css');
+@import url('./faq.css');
+@import url('./covers.css');
+@import url('./reviews.css');
+@import url('./work-together.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  color: #fafafa;
+  background-color: #1c1d20;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  scroll-behavior: smooth;
 }
