@@ -14,7 +14,7 @@
   .container {
     max-width: none;
     width: 768px;
-    margin: 0 32px;
+    padding: 0 32px;
   }
   .section-margin {
     margin-bottom: 96px;
