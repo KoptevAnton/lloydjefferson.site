@@ -1,0 +1,31 @@
+.container {
+  min-width: 320px;
+  max-width: 375px;
+
+  padding: 0 16px;
+  margin: 0 auto;
+}
+.section-margin {
+  margin-bottom: 64px;
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: none;
+    width: 768px;
+    margin: 0 32px;
+  }
+  .section-margin {
+    margin-bottom: 96px;
+  }
+}
+/* desktop */
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
+  .section-margin {
+    margin-bottom: 164px;
+  }
+}
