@@ -1,0 +1,29 @@
+.covers {
+  padding: 0;
+  height: 508px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(217, 217, 217, 0.04),
+      rgba(217, 217, 217, 0.04)
+    ),
+    url(../img/covers/background-ellipse.svg),
+    url(../img/covers/background-ellipse.svg),
+    url(../img/covers/background-ellipse.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center, top 23px left -699px, top -226px left -281px,
+    bottom -336px right -384px;
+}
+
+@media screen and (min-width: 768px) {
+  .covers {
+    height: 960px;
+    background-position: center, top 23px left -539px, top -250px left -121px,
+      bottom -104px right -331px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .covers {
+    background-position: center, top 123px left -212px, top -250px left 216px,
+      bottom -204px right -226px;
+  }
+}
