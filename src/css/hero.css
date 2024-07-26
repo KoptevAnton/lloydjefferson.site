@@ -1,0 +1,108 @@
+.hero-container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-container {
+        width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .hero-container {
+        width: 1440px;
+        padding: 0 32px;
+    }
+}
+.section-hero {
+    height: 812px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo-lloyd-hero {
+    max-width: 343px;
+    margin-bottom: 212px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #FAFAFA;
+}
+
+@media only screen and (min-width: 768px) {
+    .logo-lloyd-hero {
+        max-width: 632px;
+        font-size: 90px;
+        line-height: 1;
+        margin-bottom: 187px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .logo-lloyd-hero {
+        max-width: 1084px;
+        margin-bottom: 243px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.ul-hero {
+    display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: 4px;
+margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .ul-hero {
+        gap: 8px;
+    }
+}
+
+.link-hero {
+    display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid rgba(250, 250, 250, 0.2);
+border-radius: 60px;
+width: 37px;
+height: 37px;
+font-family: "Inter Tight";
+font-weight: 500;
+font-size: 14px;
+letter-spacing: -0.02em;
+color: #fafafa;
+}
+.link-hero.link-hero-email {
+    width: 178px;
+    padding: 10px 12px;
+}
+@media only screen and (min-width: 768px) {
+    .link-hero {
+        font-size: 16px;
+        line-height: normal;
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-social-item.hero-email>a {
+        width: 225px;
+        padding: 18px 24px;
+    }
+}
+@media (max-width: 367.98px) {
+    .hero-social-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
