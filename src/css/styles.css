@@ -6,8 +6,9 @@
 */
 
 @import url('https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500..600&display=swap');
 
+@import url('./fonts.css');
+@import url('./container.css');
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
@@ -38,4 +39,18 @@
   -webkit-text-size-adjust: 100%;
 
   scroll-behavior: smooth;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
