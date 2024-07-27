@@ -4,19 +4,18 @@ import { Navigation, Keyboard } from 'swiper/modules';
 import axios from 'axios';
 
 const swiperOptions = {
-    modules: [Navigation, Keyboard],
-  direction: 'horizontal',
-  slidesPerView: 1,
-  spaceBetween: 16,
+  modules: [Navigation, Keyboard],
   navigation: {
-    nextEl: '.rewiews-btn-next',
-    prevEl: '.rewiews-btn-prev',
+    nextEl: '.reviews-next-btn',
+    prevEl: '.reviews-prev-btn',
   },
 
   keyboard: {
     enabled: true,
     onlyInViewport: true,
-  },
+    },
+    direction: 'horizontal',
+  
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -34,9 +33,9 @@ const swiperOptions = {
 const swiperReviews = new Swiper('.swiper-reviews', swiperOptions);
 
 const refs = {
-  slideWrapper: document.querySelector('.reviews-list-swiper-wrapper'),
-  prevBtn: document.querySelector('.reviews-btn-prev'),
-  nextBtn: document.querySelector('.reviews-btn-next'),
+  slideWrapper: document.querySelector('.reviews-swiper-wrapper'),
+  prevBtn: document.querySelector('.reviews-prev-btn'),
+  nextBtn: document.querySelector('.reviews-next-btn'),
 };
 
 async function getReviews() {
@@ -52,7 +51,7 @@ async function getReviews() {
 getReviews();
 
 function slideTemplate(slide) {
-  return `<li class="swiper-slide reviews-list-item">
+  return `<li class="swiper-slide reviews-swiper-slide">
           <img
             class="reviews-img"
             src="${slide.avatar_url}"
@@ -70,9 +69,9 @@ function slidesTemplate(slides) {
 }
 
 refs.nextBtn.addEventListener('click', () => {
-  refs.prevBtn.classList.remove('reviews-btn-prev-off');
+  refs.prevBtn.classList.remove('reviews-prev-btn-off');
 });
 
 refs.prevBtn.addEventListener('click', () => {
-  refs.nextBtn.classList.remove('reviews-btn-prev-off');
+  refs.nextBtn.classList.remove('reviews-prev-btn-off');
 });
