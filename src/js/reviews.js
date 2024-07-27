@@ -1,7 +1,11 @@
+import iziToast from 'izitoast'
+import 'izitoast/dist/css/iziToast.min.css'
+
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 import axios from 'axios';
+//import elements from './elements'
 
 const swiperOptions = {
   modules: [Navigation, Keyboard],
@@ -20,11 +24,11 @@ const swiperOptions = {
     320: {
       slidesPerView: 1,
     },
-    767: {
+    768: {
       slidesPerView: 2,
       spaceBetween: 16,
     },
-    1439: {
+    1440: {
       slidesPerView: 4,
       spaceBetween: 16,
     },
