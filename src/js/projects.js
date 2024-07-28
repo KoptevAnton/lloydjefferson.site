@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import {prevButtonEL, nextButtonEL} from './elements.js'
+import {prevButtonEl, nextButtonEl} from './elements.js'
 
 Swiper.use([Navigation, Keyboard]);
 new Swiper('.projects__swiper-container', {
@@ -14,7 +14,7 @@ new Swiper('.projects__swiper-container', {
   slidesPerView: 1,
   spaceBetween: 280,
   navigation: {
-    nextEl: nextButtonEL,
-    prevEl: prevButtonEL,
+    nextEl: nextButtonEl,
+    prevEl: prevButtonEl,
   },
 });
