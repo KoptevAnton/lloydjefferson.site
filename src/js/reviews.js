@@ -3,9 +3,11 @@ import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 import axios from 'axios';
 
+import elements from './elements'
 
 
-const listEl = document.querySelector('.reviews-swiper-wrapper');
+
+// const listEl = document.querySelector('.reviews-swiper-wrapper');
 
 async function getReviewsData() {
   try {
@@ -23,7 +25,7 @@ async function renderReviews() {
   try {
     const reviewsData = await getReviewsData();
     if (!reviewsData) {
-      listEl.innerHTML = '<li>Not Found</li>';
+      elements.listEl.innerHTML = '<li>Not Found</li>';
       return;
     }
     const reviewsList = reviewsData
@@ -43,7 +45,7 @@ async function renderReviews() {
     `
       )
       .join('');
-    listEl.innerHTML = reviewsList;
+    elements.listEl.innerHTML = reviewsList;
   } catch (error) {
     console.error(error);
   }
@@ -60,6 +62,7 @@ async function initSwiper() {
 
   const swiper = new Swiper('.reviews-section .swiper-reviews', {
     modules: [Navigation, Keyboard],
+    direction: 'horizontal',
     spaceBetween: 16,
     pageUpDown: true,
     mousewheel: true,
