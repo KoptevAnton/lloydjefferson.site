@@ -3,11 +3,8 @@ import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 import axios from 'axios';
 
-import elements from './elements'
+import { listEl } from './elements';
 
-
-
-// const listEl = document.querySelector('.reviews-swiper-wrapper');
 
 async function getReviewsData() {
   try {
@@ -25,7 +22,7 @@ async function renderReviews() {
   try {
     const reviewsData = await getReviewsData();
     if (!reviewsData) {
-      elements.listEl.innerHTML = '<li>Not Found</li>';
+      listEl.innerHTML = '<li>Not Found</li>';
       return;
     }
     const reviewsList = reviewsData
@@ -45,7 +42,7 @@ async function renderReviews() {
     `
       )
       .join('');
-    elements.listEl.innerHTML = reviewsList;
+    listEl.innerHTML = reviewsList;
   } catch (error) {
     console.error(error);
   }
