@@ -1,10 +1,10 @@
 import Swiper from 'swiper';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import { Navigation, Keyboard } from 'swiper/modules';
 import axios from 'axios';
 
-import { listEl } from './elements';
-
+import { listEl, revBtnPrevEl, revBtnNextEl } from './elements';
 
 async function getReviewsData() {
   try {
@@ -50,22 +50,16 @@ async function renderReviews() {
 
 async function initSwiper() {
   await renderReviews();
-  let btnPrev = document.querySelector(
-    '.reviews-section .swiper-reviews .reviews-prev-btn'
-  );
-  let btnNext = document.querySelector(
-    '.reviews-section .swiper-reviews .reviews-next-btn'
-  );
 
   const swiper = new Swiper('.reviews-section .swiper-reviews', {
     modules: [Navigation, Keyboard],
-    direction: 'horizontal',
+    // direction: 'horizontal',
     spaceBetween: 16,
     pageUpDown: true,
     mousewheel: true,
     navigation: {
-      prevEl: btnPrev ? btnPrev : undefined,
-      nextEl: btnNext ? btnNext : undefined,
+      prevEl: revBtnPrevEl ? revBtnPrevEl : undefined,
+      nextEl: revBtnNextEl ? revBtnNextEl : undefined,
     },
     allowTouchMove: true,
     breakpoints: {
