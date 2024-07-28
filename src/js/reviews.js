@@ -1,81 +1,89 @@
-import iziToast from 'izitoast'
-import 'izitoast/dist/css/iziToast.min.css'
-
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 import axios from 'axios';
-//import elements from './elements'
 
-const swiperOptions = {
-  modules: [Navigation, Keyboard],
-  navigation: {
-    nextEl: '.reviews-next-btn',
-    prevEl: '.reviews-prev-btn',
-  },
 
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-    },
-    direction: 'horizontal',
-  
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 16,
-    },
-    1440: {
-      slidesPerView: 4,
-      spaceBetween: 16,
-    },
-  },
-};
-const swiperReviews = new Swiper('.swiper-reviews', swiperOptions);
 
-const refs = {
-  slideWrapper: document.querySelector('.reviews-swiper-wrapper'),
-  prevBtn: document.querySelector('.reviews-prev-btn'),
-  nextBtn: document.querySelector('.reviews-next-btn'),
-};
+const listEl = document.querySelector('.reviews-swiper-wrapper');
 
-async function getReviews() {
-  const res = await axios.get('https://portfolio-js.b.goit.study/api/reviews', {
-    headers: {
-      accept: 'application/json',
+async function getReviewsData() {
+  try {
+    const response = await axios.get(
+      'https://portfolio-js.b.goit.study/api/reviews'
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
+async function renderReviews() {
+  try {
+    const reviewsData = await getReviewsData();
+    if (!reviewsData) {
+      listEl.innerHTML = '<li>Not Found</li>';
+      return;
+    }
+    const reviewsList = reviewsData
+      .map(
+        review => `
+        
+      <li class="swiper-slide reviews-swiper-slide">
+          <img src="${review.avatar_url}" 
+          loading="lazy" alt="${review.author}" 
+          class="reviews-img" 
+          width="48" height="48">
+          <div class = "reviews-desc">
+          <h3 class="reviews-item-subtitle">${review.author}</h3>
+        <div class="reviews-text">${review.review}</div>
+        </div>
+      </li>
+    `
+      )
+      .join('');
+    listEl.innerHTML = reviewsList;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function initSwiper() {
+  await renderReviews();
+  let btnPrev = document.querySelector(
+    '.reviews-section .swiper-reviews .reviews-prev-btn'
+  );
+  let btnNext = document.querySelector(
+    '.reviews-section .swiper-reviews .reviews-next-btn'
+  );
+
+  const swiper = new Swiper('.reviews-section .swiper-reviews', {
+    modules: [Navigation, Keyboard],
+    spaceBetween: 16,
+    pageUpDown: true,
+    mousewheel: true,
+    navigation: {
+      prevEl: btnPrev ? btnPrev : undefined,
+      nextEl: btnNext ? btnNext : undefined,
+    },
+    allowTouchMove: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1440: {
+        slidesPerView: 4,
+      },
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
     },
   });
-
-  refs.slideWrapper.insertAdjacentHTML('afterbegin', slidesTemplate(res.data));
 }
 
-getReviews();
-
-function slideTemplate(slide) {
-  return `<li class="swiper-slide reviews-swiper-slide">
-          <img
-            class="reviews-img"
-            src="${slide.avatar_url}"
-            alt="${slide.author}"
-          />
-          <div class="reviews-desc">
-            <p class="reviews-item-subtitle">${slide.author}</p>
-            <p class="reviews-text">${slide.review}</p>
-          </div>
-        </li>`;
-}
-
-function slidesTemplate(slides) {
-  return slides.map(slideTemplate).join('');
-}
-
-refs.nextBtn.addEventListener('click', () => {
-  refs.prevBtn.classList.remove('reviews-prev-btn-off');
-});
-
-refs.prevBtn.addEventListener('click', () => {
-  refs.nextBtn.classList.remove('reviews-prev-btn-off');
-});
+initSwiper();
