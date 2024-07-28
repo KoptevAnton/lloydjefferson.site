@@ -1,7 +1,7 @@
 
 .faq {
 width: 100%;
-padding: 20px 0;
+margin-bottom: 64px;
 }
 
 .title-faq {
@@ -70,7 +70,7 @@ stroke: #FAFAFA;
 
 @media only screen and (min-width: 768px) {
 .faq {
-padding: 25px 0;
+margin-bottom: 96px;
 }
 
 .list-faq {
@@ -88,7 +88,7 @@ max-width: 656px;
 }
 
 .faq {
-padding: 40px 0;
+margin-bottom: 164px;
 }
 
 .list-faq:nth-child(odd) {
