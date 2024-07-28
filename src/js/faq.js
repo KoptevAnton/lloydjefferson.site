@@ -1,7 +1,7 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
-export function initFAQ() {
+document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-list-ul .list-faq');
 
     faqItems.forEach(item => {
@@ -35,8 +35,5 @@ export function initFAQ() {
             }
         });
     });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    initFAQ();
 });
+
