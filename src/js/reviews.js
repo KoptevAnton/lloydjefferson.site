@@ -1,10 +1,10 @@
 import Swiper from 'swiper';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Keyboard } from 'swiper/modules';
 import axios from 'axios';
 
-import { listEl, revBtnPrevEl, revBtnNextEl } from './elements';
+import { listEl, revBtnPrevEl, revBtnNextEl } from './elements.js';
 
 async function getReviewsData() {
   try {
