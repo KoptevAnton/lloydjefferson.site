@@ -1,18 +1,5 @@
-/**
- * Import to your file:
- * import elements from './elements'
- *
- * Example usage:
- * elements.form.addEventListener('submit', (event) => {
- *   event.preventDefault();
- * });
- */
+// projects
+const prevButtonEL = document.querySelector('.projects__button--prev-js');
+const nextButtonEL = document.querySelector('.projects__button--next-js');
 
-export default {
-  form: document.querySelector('.form'),
-  email: document.querySelector('.footer-input-email'),
-  comment: document.querySelector('.footer-input-comment'),
-  button: document.querySelector('.footer-btn'),
-  wrongEmail: document.querySelector('.wrongEmail'),
-  wrongComment: document.querySelector('.wrongComment'),
-};
+export { prevButtonEL, nextButtonEL };
