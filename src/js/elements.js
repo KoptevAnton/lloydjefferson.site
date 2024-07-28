@@ -10,4 +10,9 @@
 
 export default {
   form: document.querySelector('.form'),
+  email: document.querySelector('.footer-input-email'),
+  comment: document.querySelector('.footer-input-comment'),
+  button: document.querySelector('.footer-btn'),
+  wrongEmail: document.querySelector('.wrongEmail'),
+  wrongComment: document.querySelector('.wrongComment'),
 };
