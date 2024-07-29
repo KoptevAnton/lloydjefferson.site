@@ -1,11 +1,14 @@
 .section-hero {
-  height: 812px;
+  min-height: 812px;
   display: flex;
   align-items: flex-end;
-  background-image: url(../img/hero/png/Glass-effect-mob1х-min.png);
-  background-image: url(../img/hero/webp/Glass-effect-mob1х.webp);
+  background-image: url('../img/hero/png/Glass-effect-mob1х-min.png');
+  background-image: image-set(
+    url('../img/hero/webp/Glass-effect-mob1х.webp') type('image/webp'),
+    url('../img/hero/png/Glass-effect-mob1х-min.png') type('image/png')
+  );
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: left center;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -119,6 +122,7 @@
   font-family: 'Inter Tight';
   font-weight: 500;
   font-size: 14px;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: #fafafa;
 }
@@ -129,7 +133,7 @@
 @media only screen and (min-width: 768px) {
   .link-hero {
     font-size: 16px;
-    line-height: normal;
+    line-height: 1.2;
     width: 55px;
     height: 55px;
   }
