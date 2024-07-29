@@ -1,9 +1,7 @@
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 
-const coversSection = document.querySelector('#covers');
-const coversBackground = document.querySelector('.covers-background');
-const coversWrapper = document.querySelector('.covers-wrapper');
+import { coversSection, coversBackground, coversWrapper } from './elements.js';
 
 coversWrapper.addEventListener('click', showImage);
 
