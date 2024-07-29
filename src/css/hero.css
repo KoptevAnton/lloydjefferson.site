@@ -1,0 +1,153 @@
+.section-hero {
+  min-height: 812px;
+  display: flex;
+  align-items: flex-end;
+  background-image: url('../img/hero/png/Glass-effect-mob1х-min.png');
+  background-image: image-set(
+    url('../img/hero/webp/Glass-effect-mob1х.webp') type('image/webp'),
+    url('../img/hero/png/Glass-effect-mob1х-min.png') type('image/png')
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-bottom: 64px;
+}
+@media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .section-hero {
+    background-image: url(../img/hero/png/Glass-effect-mob2х-min.png);
+    background-image: url(../img/hero/webp/Glass-effect-mob2х.webp);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .section-hero {
+    background-image: url(../img/hero/png/Glass-effect-tab1x-min.png);
+    background-image: url(../img/hero/webp/Glass-effect-tab1x.webp);
+    height: 1024px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-size: 50% 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .section-hero {
+    background-image: url(../img/hero/png/Glass-effect-tab2x-min.png);
+    background-image: url(../img/hero/webp/Glass-effect-tab2x.webp);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .section-hero {
+    background-image: url(../img/hero/png/Glass-effect-desc1x-min.png);
+    background-image: url(../img/hero/webp/Glass-effect-desc1x.webp);
+    padding-bottom: 32px;
+    padding-top: 32px;
+    height: 900px;
+    background-size: contain;
+    margin-bottom: 96px;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .section-hero {
+    background-image: url(../img/hero/png/Glass-effect-desc2x-min.png);
+    background-image: url(../img/hero/webp/Glass-effect-desc2x.webp);
+  }
+}
+
+@media only screen and (min-width: 2048px) {
+  .section-hero {
+    background-image: url(../img/hero/png/Glass-effect-desc3x-min.png);
+    background-image: url(../img/hero/webp/Glass-effect-desc3x.webp);
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  .section-hero {
+    background-size: 50% 100%;
+  }
+}
+.logo-lloyd-hero {
+  max-width: 343px;
+  margin-bottom: 212px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo-lloyd-hero {
+    max-width: 632px;
+    font-size: 90px;
+    line-height: 1;
+    margin-bottom: 187px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .logo-lloyd-hero {
+    max-width: 1084px;
+    margin-bottom: 243px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.ul-hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .ul-hero {
+    gap: 8px;
+  }
+}
+
+.link-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  width: 37px;
+  height: 37px;
+  font-family: 'Inter Tight';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+.link-hero.link-hero-email {
+  width: 178px;
+  padding: 10px 12px;
+}
+@media only screen and (min-width: 768px) {
+  .link-hero {
+    font-size: 16px;
+    line-height: 1.2;
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .link-hero.link-hero-email {
+    width: 225px;
+    padding: 18px 24px;
+  }
+}
+@media (max-width: 367.98px) {
+  .ul-hero {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
