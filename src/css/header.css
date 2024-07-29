@@ -92,7 +92,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../img/mobile-menu/mobile-menu-background.png);
+    background-image: url(../img/header/mobile-menu-background.png);
     background-repeat: no-repeat;
 }
 
@@ -215,11 +215,12 @@
         padding: 18px 24px;
         border: none;
         background-color: #ED3B44;
-        transition: backround-color .25s cubic-bezier(.4, 0, .2, 1);
+        transition: backround-color 300ms ease-in-out, transform 300ms ease-in-out;
     }
 
     .order-btn:hover{
-        background-color:#e0373f;;
+        background-color:#e0373f;
+        transform: scale(1.05);
     }
 }
 
