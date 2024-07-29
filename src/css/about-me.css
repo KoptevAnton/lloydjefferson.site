@@ -1,6 +1,3 @@
-.about-me {
-}
-
 .about-conteiner {
   display: flex;
   flex-direction: column;
@@ -42,19 +39,21 @@
   text-transform: uppercase;
   line-height: 117%;
 }
+
 .word-functional {
   color: #ed3b44;
 }
+
 .word-websites {
   color: #fafafa66;
 }
+
 .aboutme-accordion-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.aboutme-accordion-list {
-}
+
 .about-me-subtitle {
   display: flex;
   justify-content: space-between;
@@ -86,7 +85,6 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   cursor: pointer;
   transition: transform 300ms ease-in-out;
-  /* color: currentColor; */
   background-color: transparent;
 }
 .aboutme-accordion-text {
@@ -96,9 +94,11 @@
   margin-top: 12px;
   margin-bottom: 20px;
 }
+
 .text-role-education {
   gap: 10px;
 }
+
 .aboutme-item-text {
   color: #fafafa;
   font-size: 16px;
@@ -106,6 +106,7 @@
   line-height: 24px;
   letter-spacing: -0.02em;
 }
+
 .about-me-swiper-conteiner {
   display: flex;
   align-items: center;
@@ -114,6 +115,7 @@
   flex-direction: row;
   min-width: 0;
 }
+
 .about-me-swiper {
   display: flex;
   justify-content: space-between;
@@ -122,13 +124,13 @@
   width: 260px;
   min-width: 0;
 }
+
 .swiper-wrapper {
   display: flex;
   min-width: 0;
   width: 260px;
 }
-.swiper-element {
-}
+
 .swiper-icon {
   width: 130px;
   height: 130px;
@@ -145,6 +147,7 @@
   line-height: 150%;
   letter-spacing: -0.02em;
 }
+
 .aboutme-next {
   width: 28px;
   height: 28px;
@@ -175,14 +178,12 @@ button.aboutme-next {
   background-color: blue;
 }
 
-.btn-sviper-next {
-}
-
 /* tablet */
 @media screen and (min-width: 768px) {
   .about-conteiner {
     gap: 64px;
   }
+
   .aboutme-header-list {
     max-width: 704px;
     height: 700px;
@@ -190,6 +191,7 @@ button.aboutme-next {
     padding-left: 64px;
     padding-right: 64px;
   }
+
   .aboutme-title {
     font-size: 38px;
     font-size: 38px;
@@ -197,51 +199,63 @@ button.aboutme-next {
     letter-spacing: -0.03em;
     text-align: left;
   }
+
   .about-me-swiper-conteiner {
     width: 704px;
   }
+
   .about-me-swiper {
     width: 600px;
   }
+
   .swiper-icon {
     width: 200px;
     height: 200px;
     font-size: 20px;
   }
+
   .aboutme-next {
     width: 40px;
     height: 40px;
   }
+
   .aboutme-accordion-text {
     gap: 10px;
     margin-top: 8px;
     margin-bottom: 32px;
   }
+
   .aboutme-accordion-btn {
     width: 40px;
     height: 40px;
   }
 }
+
 /* desktop */
 @media screen and (min-width: 1440px) {
   .about-conteiner {
     gap: 96px;
   }
+
   .about-me-header {
     display: flex;
     flex-direction: row;
     gap: 16px;
   }
+
   .aboutme-header-list {
     width: 680px;
     height: 700px;
   }
+
   .about-me-swiper-conteiner {
     width: 1312px;
   }
+
   .about-me-swiper {
     width: 1200px;
   }
+
   .aboutme-item-text {
     width: 612px;
     margin-left: 696px;
@@ -304,7 +318,7 @@ button.aboutme-next {
   transition-property: height, visibility;
   transition-timing-function: ease;
 }
-/*  */
+
 .aboutme-next {
   cursor: pointer;
   transition: transform 0.3s;
