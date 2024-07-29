@@ -16,10 +16,6 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* .container {
-  padding: 0;
-} */
-
 .work-together {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -153,15 +149,6 @@ input:-webkit-autofill:active {
 
 /*tablet */
 @media screen and (min-width: 768px) {
-  /* .container {
-    max-width: none;
-    width: 768px;
-    margin: 0 32px;
-  } */
-
-  /* .section-margin {
-    margin-bottom: 96px;
-  } */
 
   .work-together {
     padding-top: 80px;
@@ -224,20 +211,12 @@ input:-webkit-autofill:active {
 
 /*desktop */
 @media screen and (min-width: 1440px) {
-  /* .container {
-    width: 1440px;
-  } */
 
   .footer-container {
     display: flex;
-    /* align-items: center; */
-    /* flex-direction: row; */
     justify-content: center;
   }
 
-  /* .section-margin {
-    margin-bottom: 164px;
-  } */
 
   .footer-input-email,
   .footer-input-comment {
