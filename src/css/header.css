@@ -27,6 +27,7 @@
 .logo-text{
     font-weight: 500;
     font-size: 20px;
+    line-height: 1.2;
     letter-spacing: -0.02em;
     padding-left: 8px;
 }
@@ -152,9 +153,12 @@
 }
 
 .order {
-    text-decoration: none;
     display: block;
+    font-size: 14px;
+    text-decoration: none;
+    width: 164px;
     margin-top: auto;
+    margin: 0 auto;
     border-radius: 60px;
     text-align: center;
     padding: 14px 31px;
@@ -226,6 +230,7 @@
         color: #fafafa;
         font-weight: 500;
         font-size: 16px;
+        line-height: 1.2;
         text-decoration-skip-ink: none;
         text-decoration: underline;
         background-color: transparent;
@@ -251,6 +256,10 @@
         transition: color 300ms cubic-bezier(.4, 0, .2, 1);
     }
 
+    .menu-link{
+        line-height: 1.2;
+    }
+
     .menu-item:hover{
         color:#ed3b44;
     }
@@ -264,6 +273,7 @@
         border-radius: 60px;
         padding: 18px 24px;
         border: none;
+        line-height: 1.2;
         background-color: #ED3B44;
         transition: backround-color 300ms ease-in-out, transform 300ms ease-in-out;
     }
