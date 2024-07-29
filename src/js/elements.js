@@ -9,6 +9,9 @@ const revBtnNextEl = document.querySelector('.reviews-next-btn');
 const coversSection = document.querySelector('#covers');
 const coversBackground = document.querySelector('.covers-background');
 const coversWrapper = document.querySelector('.covers-wrapper');
+// faq
+const faqItems = document.querySelectorAll('.faq-list-ul .list-faq');
+
 
 export { 
     prevButtonEl, 
@@ -19,5 +22,6 @@ export {
     coversSection,
     coversBackground,
     coversWrapper,
+    faqItems,
 };
 
