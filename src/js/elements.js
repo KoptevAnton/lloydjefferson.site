@@ -10,11 +10,11 @@ const coversSection = document.querySelector('#covers');
 const coversBackground = document.querySelector('.covers-background');
 const coversWrapper = document.querySelector('.covers-wrapper');
 //header
-const mobileModalBtn = document.querySelector(".mobile-menu-btn");
-const modal = document.querySelector(".modal");
-const closeModalBtn = document.querySelector(".close-menu-btn");
-const menuBtn = document.querySelector(".menu-btn")
-const menuList = document.querySelector(".menu-list");
+const mobileModalBtn = document.querySelector('.mobile-menu-btn');
+const modal = document.querySelector('.modal');
+const closeModalBtn = document.querySelector('.close-menu-btn');
+const menuBtn = document.querySelector('.menu-btn');
+const menuList = document.querySelector('.menu-list');
 // Work-together
 const formEL = document.querySelector('.footer-form-feedback');
 const emailEL = document.querySelector('.footer-input-email');
@@ -23,6 +23,9 @@ const buttonEL = document.querySelector('.footer-btn');
 const wrongEmailEL = document.querySelector('.wrongEmail');
 const wrongCommentEL = document.querySelector('.wrongComment');
 const btnTop = document.querySelector('.btnToTop');
+// About-me
+const aboutmeAccordion = document.querySelector('.aboutme-accordion-container');
+const nextSlideBtn = document.querySelector('.btn-aboutswiper-next');
 
 export {
   prevButtonEl,
@@ -45,4 +48,6 @@ export {
   wrongEmailEL,
   wrongCommentEL,
   btnTop,
+  aboutmeAccordion,
+  nextSlideBtn,
 };

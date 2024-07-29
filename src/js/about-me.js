@@ -3,8 +3,7 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-const aboutmeAccordion = document.querySelector('.aboutme-accordion-container');
-const nextSlideBtn = document.querySelector('.btn-aboutswiper-next');
+import { aboutmeAccordion, nextSlideBtn } from './elements.js';
 
 function createAccordion({
   containerClass,
@@ -100,40 +99,3 @@ const aboutmeSwiper = new Swiper('.about-me-swiper', {
 nextSlideBtn.addEventListener('click', e => {
   aboutmeSwiper.slideNext();
 });
-
-// new Swiper('.about-me-swiper', {
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewport: false,
-//   },
-//   direction: 'horizontal',
-//   slidesPerView: 1,
-//   spaceBetween: 280,
-//   navigation: {
-//     nextEl: nextSlideBtn,
-//   },
-// });
-
-// const aboutmeSwiper = new Swiper('.about-me-swiper', {
-//   modules: [Navigation, Keyboard],
-//   slidesPerView: 4,
-//   spaceBetween: 10,
-//   loop: true,
-//   loopAdditionalSlides: 4,
-//   grabCursor: true,
-//   speed: 4000,
-//   autoplay: {
-//     delay: 0,
-//     disableOnInteraction: false,
-//     pauseOnMouseEnter: true,
-//   },
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewport: true,
-//   },
-//   navigation: {
-//     nextEl: '.aboutme-next',
-//   },
-// });
-
-// nextSlideBtn.addEventListener('click', () => aboutSwiper.slideNext());

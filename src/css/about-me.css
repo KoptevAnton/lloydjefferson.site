@@ -279,52 +279,16 @@ button.aboutme-next {
   border-radius: 100px;
 }
 
-/* .swiper-icon {
-  width: 130px;
-  height: 130px;
-  stroke-width: 1px;
-  stroke: rgba(250, 250, 250, 0.2);
-  justify-content: center;
-  align-items: center;
-  color: #fafafa;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
-  border-radius: 100px;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  display: flex;
-  flex-shrink: 0;
-} */
-
-/* .swiper-wrapper.aboutme-swiper-wrapper.animated-element.animation-left {
-  transform: translateX(1000px);
-  transition: opacity 3s, transform 3s;
-} */
-
-/* .swiper-wrapper.aboutme-swiper-wrapper.animated-element.animation-left.visible {
-  opacity: 1;
-  transform: translateX(0);
-} */
-
-/* .swiper-element-active > .swiper-icon {
+.swiper-element-active > .swiper-icon {
   background-color: #ed3b44;
-} */
+}
 
-/* .animated-element.animation-left {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: opacity 1s, transform 1s;
-  transition-delay: 300ms;
-} */
-
-/* .aboutme-next {
-  width: 28px;
-  height: 28px;
+.aboutme-next {
   fill: none;
   cursor: pointer;
   stroke: #3b3b3b;
   z-index: 999;
-} */
+}
 
 /* accordion */
 .aboutme-accordion-list.js-enabled .aboutme-accordion-text {
