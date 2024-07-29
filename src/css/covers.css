@@ -79,6 +79,11 @@
   animation-name: leftToRight;
 }
 
+.covers-full-image {
+  box-shadow: 0 0 4px #ed3b44, 0 0 8px #ed3b44, 0 0 12px #ed3b44,
+    0 0 16px #ed3b44, 0 0 20px #ed3b44;
+}
+
 /* Tablet */
 @media screen and (min-width: 768px) {
   .covers {

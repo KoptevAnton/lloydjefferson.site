@@ -35,16 +35,29 @@ function showImage(event) {
 
   const imageName = event.target.dataset.name;
   const instance = basicLightbox.create(
-    `<img
-            src="./img/covers/${imageName}.jpg"
-            srcset="
-              ./img/covers/${imageName}.jpg    1x,
-              ./img/covers/${imageName}@2x.jpg 2x,
-              ./img/covers/${imageName}@3x.jpg 3x
-            "
-            alt="${event.target.alt}"
-            class="covers-image"
-          />`,
+    `<picture>
+      <source
+        srcset="
+          ./img/covers/${imageName}.webp    1x,
+          ./img/covers/${imageName}@2x.webp 2x,
+          ./img/covers/${imageName}@3x.webp 3x
+        "
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./img/covers/${imageName}.jpg    1x,
+          ./img/covers/${imageName}@2x.jpg 2x,
+          ./img/covers/${imageName}@3x.jpg 3x
+        "
+        type="image/jpg"
+      />
+      <img
+        src="./img/covers/${imageName}-desktop.jpg"
+        alt="${event.target.alt}"
+        class="covers-full-image"
+      />
+    </picture>`,
     {
       onShow: instance => {
         window.addEventListener('keydown', closeOnEscape);
