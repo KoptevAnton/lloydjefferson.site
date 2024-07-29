@@ -31,31 +31,13 @@ function showImage(event) {
     return;
   }
 
-  const imageName = event.target.dataset.name;
+  const image = event.target.currentSrc;
   const instance = basicLightbox.create(
-    `<picture>
-      <source
-        srcset="
-          ./img/covers/${imageName}.webp    1x,
-          ./img/covers/${imageName}@2x.webp 2x,
-          ./img/covers/${imageName}@3x.webp 3x
-        "
-        type="image/webp"
-      />
-      <source
-        srcset="
-          ./img/covers/${imageName}.jpg    1x,
-          ./img/covers/${imageName}@2x.jpg 2x,
-          ./img/covers/${imageName}@3x.jpg 3x
-        "
-        type="image/jpg"
-      />
-      <img
-        src="./img/covers/${imageName}-desktop.jpg"
-        alt="${event.target.alt}"
-        class="covers-full-image"
-      />
-    </picture>`,
+    `<img
+      src="${image}"
+      alt="${event.target.alt}"
+      class="covers-full-image"
+    />`,
     {
       onShow: instance => {
         window.addEventListener('keydown', closeOnEscape);
