@@ -9,6 +9,14 @@ const revBtnNextEl = document.querySelector('.reviews-next-btn');
 const coversSection = document.querySelector('#covers');
 const coversBackground = document.querySelector('.covers-background');
 const coversWrapper = document.querySelector('.covers-wrapper');
+// Work-together
+const formEL = document.querySelector('.footer-form-feedback');
+const emailEL = document.querySelector('.footer-input-email');
+const commentEL = document.querySelector('.footer-input-comment');
+const buttonEL = document.querySelector('.footer-btn');
+const wrongEmailEL = document.querySelector('.wrongEmail');
+const wrongCommentEL = document.querySelector('.wrongComment');
+const btnTop = document.querySelector('.btnToTop');
 
 export {
   prevButtonEl,
@@ -19,4 +27,11 @@ export {
   coversSection,
   coversBackground,
   coversWrapper,
+  formEL,
+  emailEL,
+  commentEL,
+  buttonEL,
+  wrongEmailEL,
+  wrongCommentEL,
+  btnTop,
 };

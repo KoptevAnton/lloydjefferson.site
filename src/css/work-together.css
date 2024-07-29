@@ -6,7 +6,6 @@ textarea:focus {
 button {
   border: none;
 }
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -30,7 +29,7 @@ input:-webkit-autofill:active {
 }
 
 .footer-wrapper {
-  width: 267px;
+  min-width: 267px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -40,13 +39,11 @@ input:-webkit-autofill:active {
 .footer-img {
   margin-right: 8px;
   margin-bottom: 4px;
-  border-radius: 24px;
+  border-radius: 12px;
 }
 
 .footer-title,
 .footer-title-elem {
-  font-family: inherit;
-  font-weight: 500;
   font-size: 40px;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -54,8 +51,8 @@ input:-webkit-autofill:active {
   color: #fafafa;
 }
 
-.accent {
-  color: #ed3b44;
+.title-part {
+  color: #e0373f;
 }
 
 .footer-form-feedback {
@@ -79,9 +76,6 @@ input:-webkit-autofill:active {
   border-bottom-width: 1px;
   border-bottom-color: rgba(250, 250, 250, 0.2);
   color: #fafafa;
-  font-size: inherit;
-  font-style: normal;
-  font-weight: inherit;
   line-height: 1;
   letter-spacing: normal;
   margin-top: 16px;
@@ -105,18 +99,16 @@ input:-webkit-autofill:active {
   height: 100px;
   border-radius: 50%;
   background-color: #ed3b44;
-  font-size: inherit;
-  font-style: normal;
-  font-weight: inherit;
   line-height: normal;
   letter-spacing: normal;
-  transition: background-color 0.3s ease-in-out;
-  font-family: inherit;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   color: #fafafa;
 }
 
-.footer-btn:hover {
+.footer-btn:hover,
+.footer-btn:focus {
   background-color: #e0373f;
+  transform: scale(1.05);
 }
 
 .footer-contact {
@@ -135,21 +127,27 @@ input:-webkit-autofill:active {
 .footer-contact-item {
   display: flex;
   align-items: center;
-  font-family: inherit;
-  font-weight: inherit;
   font-size: 14px;
   letter-spacing: inherit;
   color: #fafafa;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
   padding: 10px 12px;
-  width: fit-content;
+  gap: 4px;
+
   height: 37px;
 }
-
-.footer-contact-item:hover {
+.footer-contact-item:hover,
+.footer-contact-item:focus {
   border: 1px solid #fafafa;
   transition: border 0.3s ease-in-out;
+}
+
+.footer-adress-tel {
+  width: 94px;
+}
+.footer-adress-email {
+  width: 154px;
 }
 
 /*tablet */
@@ -180,6 +178,7 @@ input:-webkit-autofill:active {
   .footer-img {
     margin-right: 20px;
     margin-bottom: 7px;
+    border-radius: 24px;
   }
 
   .footer-title,
@@ -212,6 +211,13 @@ input:-webkit-autofill:active {
 
   .footer-contact-item {
     padding: 18px 32px;
+    gap: 8px;
+  }
+  .footer-adress-tel {
+    width: 107px;
+  }
+  .footer-adress-email {
+    width: 175px;
   }
 }
 
@@ -243,22 +249,154 @@ input:-webkit-autofill:active {
     width: 150px;
     height: 150px;
   }
+  .footer-adress-tel {
+    width: 107px;
+  }
+  .footer-adress-email {
+    width: 175px;
+  }
 }
 
 /* -------Border-Styles----------- */
 .inputEmail {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  font-family: inherit;
-  font-weight: inherit;
+  border: 1px solid rgba(231, 22, 22, 0.2);
   font-size: 14px;
   line-height: 1.3;
-  letter-spacing: inherit;
 }
 .inputComment {
   border: 1px solid rgba(250, 250, 250, 0.2);
-  font-family: inherit;
-  font-weight: inherit;
   font-size: 14px;
   line-height: 1.3;
-  letter-spacing: inherit;
+}
+/* -----------------ModalWindow--------------- */
+.iziToast {
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+}
+
+.toastStyle .iziToast-body {
+  max-width: 343px;
+  height: 276px;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  padding: 64px 32px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.iziToast-body .iziToast-texts {
+  margin: 0;
+}
+.toastStyle .iziToast-body .iziToast-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fafafa;
+  margin-bottom: 16px;
+  margin-right: 0;
+  min-width: 279px;
+}
+.toastStyle .iziToast-body .iziToast-message {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
+}
+.toastStyle .iziToast-close {
+  font-size: 16px;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iziToast-capsule {
+  width: fit-content;
+}
+.toastStyle * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.iziToast:after {
+  width: 0%;
+  height: 0%;
+}
+.iziToast-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media screen and (min-width: 768px) {
+  .toastStyle .iziToast-body {
+    max-width: 492px;
+    height: 246px;
+    padding: 64px;
+  }
+  .toastStyle .iziToast-body .iziToast-title {
+    min-width: 364px;
+    margin-right: 0;
+  }
+  .toastStyle .iziToast-body .iziToast-message {
+    max-width: 364px;
+  }
+}
+/* desktop */
+@media screen and (min-width: 1440px) {
+  .toastStyle .iziToast-body {
+    max-width: 492px;
+    height: 246px;
+    padding: 64px;
+  }
+}
+/* -----------btnToTop----------- */
+.btnToTop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  bottom: 25px;
+  right: 5px;
+  z-index: 99;
+  color: #ed3b44;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+}
+
+.btnToTop.show {
+  display: block;
+}
+
+.toTopImg {
+  width: 40px;
+  height: 40px;
+  fill: none;
+  stroke: currentColor;
+  transition: color 300ms ease-in-out;
+}
+.toTopImg:hover,
+.toTopImg:focus {
+  color: rgba(250, 250, 250, 1);
+  border: 2px solid rgba(250, 250, 250, 1);
+  border-radius: 50%;
+  transform: scale(1.05);
+}
+/* tablet */
+@media screen and (min-width: 768px) {
+  .toTopImg {
+    width: 50px;
+    height: 50px;
+  }
 }
