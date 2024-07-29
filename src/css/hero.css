@@ -9,6 +9,7 @@
   background-position: left center;
   padding-top: 32px;
   padding-bottom: 32px;
+  margin-bottom: 64px;
 }
 @media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
   .section-hero {
@@ -40,6 +41,7 @@
     padding-top: 32px;
     height: 900px;
     background-size: contain;
+    margin-bottom: 96px;
   }
 }
 
