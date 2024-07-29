@@ -15,6 +15,14 @@ const modal = document.querySelector(".modal");
 const closeModalBtn = document.querySelector(".close-menu-btn");
 const menuBtn = document.querySelector(".menu-btn")
 const menuList = document.querySelector(".menu-list");
+// Work-together
+const formEL = document.querySelector('.footer-form-feedback');
+const emailEL = document.querySelector('.footer-input-email');
+const commentEL = document.querySelector('.footer-input-comment');
+const buttonEL = document.querySelector('.footer-btn');
+const wrongEmailEL = document.querySelector('.wrongEmail');
+const wrongCommentEL = document.querySelector('.wrongComment');
+const btnTop = document.querySelector('.btnToTop');
 
 export {
   prevButtonEl,
@@ -30,4 +38,11 @@ export {
   closeModalBtn,
   menuBtn,
   menuList,
+  formEL,
+  emailEL,
+  commentEL,
+  buttonEL,
+  wrongEmailEL,
+  wrongCommentEL,
+  btnTop,
 };

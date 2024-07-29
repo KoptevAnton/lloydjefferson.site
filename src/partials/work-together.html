@@ -1,2 +1,103 @@
 <footer class="work-together" id="work-together">
+  <div class="container footer-container">
+    <div class="footer-wrapper">
+      <div class="footer-logo-text">
+        <picture>
+          <source
+            srcset="
+              ./img/work-together/image@3x.webp 1x,
+              ./img/work-together/image@2x.webp 2x,
+              ./img/work-together/image@3x.webp 3x
+            "
+            media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./img/work-together/image@3x.jpg 1x,
+              ./img/work-together/image@2x.jpg 2x,
+              ./img/work-together/image@3x.jpg 3x
+            "
+            media="(min-width: 768px)"
+            type="image/jpg"
+          />
+          <source
+            srcset="
+              ./img/work-together/image@3x-mobile.webp 1x,
+              ./img/work-together/image@2x-mobile.webp 2x,
+              ./img/work-together/image@3x-mobile.webp 3x
+            "
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./img/work-together/image@3x-mobile.jpg 1x,
+              ./img/work-together/image@2x-mobile.jpg 2x,
+              ./img/work-together/image@3x-mobile.jpg 3x
+            "
+            type="image/jpg"
+          />
+          <img
+            src="./img/work-together/image@3x.jpg"
+            alt="Jefferson"
+            class="footer-img"
+            loading="lazy"
+          />
+        </picture>
+        <h2 class="footer-title">Let’s <span class="title-part">work</span></h2>
+        <h2 class="footer-title-elem">together</h2>
+      </div>
+      <form class="footer-form-feedback">
+        <div class="footer-wrapper-form">
+          <div class="input-wrapper">
+            <input
+              class="footer-input-email"
+              type="email"
+              name="user-email"
+              placeholder="clients@gmail.com"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              required
+            />
+            <p class="wrongEmail"></p>
+          </div>
+          <div class="input-wrapper">
+            <input
+              class="footer-input-comment"
+              type="text"
+              name="user-comment"
+              placeholder="comments"
+              required
+            />
+            <p class="wrongComment"></p>
+          </div>
+        </div>
+        <button class="footer-btn" type="submit">Send</button>
+      </form>
+      <address class="footer-contact">
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <a
+              class="footer-adress-email"
+              href="mailto:lloydjefferson@gmail.com"
+              aria-label="contact email"
+              >lloydjefferson@gmail.com</a
+            >
+          </li>
+          <li class="footer-contact-item">
+            <a
+              class="footer-adress-tel"
+              href="tel:+3801111111111"
+              aria-label="contact phone number"
+              >+380 11 1111 11 11</a
+            >
+          </li>
+        </ul>
+      </address>
+      <button type="button" class="btnToTop">
+        <svg class="toTopImg" width="30" height="30">
+          <use href="./img/icons.svg#collapse"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 </footer>
