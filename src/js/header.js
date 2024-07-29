@@ -4,15 +4,17 @@ import {
     closeModalBtn,
     menuBtn,
     menuList,
+    body,
 } from './elements.js'
-
 
 mobileModalBtn.addEventListener("click",() => {
     modal.classList.toggle("is-open");
+    body.classList.toggle('no-scroll');
 })
 
 closeModalBtn.addEventListener("click",() => {
     modal.classList.remove("is-open");
+    body.classList.toggle('no-scroll');
 })
 
 modal.addEventListener("click", (evt) => {
@@ -27,8 +29,9 @@ menuBtn.addEventListener("click",() => {
 })
 
 menuList.addEventListener("click", (evt) => {
-    if (evt.target.nodeName !== "A") {
-        return;
+        if (evt.target.nodeName !== "A") {
+            return;
+        }
+        menuList.classList.remove("is-open");
     }
-    menuList.classList.remove("is-open");
-})
+)
