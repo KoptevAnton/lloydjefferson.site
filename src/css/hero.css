@@ -26,6 +26,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 @media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
   .section-hero {
