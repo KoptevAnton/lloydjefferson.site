@@ -10,11 +10,12 @@ const coversSection = document.querySelector('#covers');
 const coversBackground = document.querySelector('.covers-background');
 const coversWrapper = document.querySelector('.covers-wrapper');
 //header
-const mobileModalBtn = document.querySelector('.mobile-menu-btn');
-const modal = document.querySelector('.modal');
-const closeModalBtn = document.querySelector('.close-menu-btn');
-const menuBtn = document.querySelector('.menu-btn');
-const menuList = document.querySelector('.menu-list');
+const mobileModalBtn = document.querySelector(".mobile-menu-btn");
+const modal = document.querySelector(".modal");
+const closeModalBtn = document.querySelector(".close-menu-btn");
+const menuBtn = document.querySelector(".menu-btn")
+const menuList = document.querySelector(".menu-list");
+const body = document.body;
 // Work-together
 const formEL = document.querySelector('.footer-form-feedback');
 const emailEL = document.querySelector('.footer-input-email');
@@ -41,6 +42,7 @@ export {
   closeModalBtn,
   menuBtn,
   menuList,
+  body,
   formEL,
   emailEL,
   commentEL,
