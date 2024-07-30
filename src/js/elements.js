@@ -9,6 +9,7 @@ const revBtnNextEl = document.querySelector('.reviews-next-btn');
 const coversSection = document.querySelector('#covers');
 const coversBackground = document.querySelector('.covers-background');
 const coversWrapper = document.querySelector('.covers-wrapper');
+
 //header
 const mobileModalBtn = document.querySelector(".mobile-menu-btn");
 const modal = document.querySelector(".modal");
@@ -27,7 +28,8 @@ const btnTop = document.querySelector('.btnToTop');
 // About-me
 const aboutmeAccordion = document.querySelector('.aboutme-accordion-container');
 const nextSlideBtn = document.querySelector('.btn-aboutswiper-next');
-
+// faq
+const faqItems = document.querySelectorAll('.faq-list-ul .list-faq');
 export {
   prevButtonEl,
   nextButtonEl,
@@ -52,4 +54,5 @@ export {
   btnTop,
   aboutmeAccordion,
   nextSlideBtn,
+  faqItems,
 };
