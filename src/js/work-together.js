@@ -29,8 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function onInputEmail() {
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
   if (!emailPattern.test(emailEL.value) || emailEL.value.trim().length <= 0) {
+    wrongEmailEL.classList.add('error-message');
+
     emailEL.style.borderBottomColor = '#E74A3B';
     wrongEmailEL.style.color = '#E74A3B';
     wrongEmailEL.textContent = 'Invalid email, try again';
@@ -56,7 +58,7 @@ function onInputComment() {
 }
 
 function checkFormValidity() {
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
   const isEmailValid =
     emailPattern.test(emailEL.value) && emailEL.value.trim().length > 0;
   const isCommentValid = commentEL.value.trim().length > 0;
@@ -106,6 +108,13 @@ async function onFormSubmit(evt) {
     });
 
     formEL.reset();
+    // Видалення зеленого підсвічування та повідомлень про помилки після успішного відправлення
+    emailEL.style.borderBottomColor = '';
+    wrongEmailEL.textContent = '';
+    wrongEmailEL.style.color = '';
+    commentEL.style.borderBottomColor = '';
+    wrongCommentEL.textContent = '';
+    wrongCommentEL.style.color = '';
     localStorage.removeItem('savedUserInput');
     checkFormValidity();
   } catch (error) {
