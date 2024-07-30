@@ -326,6 +326,10 @@ button.aboutme-next {
 }
 
 /* accordion */
+.aboutme-accordion-list {
+  border-bottom: 1px solid #FAFAFA33 ;
+}
+
 .aboutme-accordion-list.js-enabled .aboutme-accordion-text {
   visibility: hidden;
 }
