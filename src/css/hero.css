@@ -2,71 +2,78 @@
   min-height: 812px;
   display: flex;
   align-items: flex-end;
-  background-image: url('../img/hero/png/Glass-effect-mob1х-min.png');
-  background-image: image-set(
-    url('../img/hero/webp/Glass-effect-mob1х.webp') type('image/webp'),
-    url('../img/hero/png/Glass-effect-mob1х-min.png') type('image/png')
+  background: linear-gradient(
+    to right,
+    #ed3b44,
+    #69292d 32%,
+    #1c1d20 50%,
+    #1c1d20 100%
   );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center;
+  position: relative;
+  overflow: hidden;
   padding-top: 32px;
   padding-bottom: 32px;
   margin-bottom: 64px;
 }
-@media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
-  .section-hero {
-    background-image: url(../img/hero/png/Glass-effect-mob2х-min.png);
-    background-image: url(../img/hero/webp/Glass-effect-mob2х.webp);
-  }
+
+.section-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -210px;
+  width: 520px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5) 1px,
+    rgba(0, 0, 0, 0.8) 5px,
+    rgba(0, 0, 0, 0.9) 5px,
+    rgba(0, 0, 0, 0.9) 6px,
+    rgba(0, 0, 0, 0) 52px
+  );
+  pointer-events: none;
+  opacity: 0.2;
 }
+
+.section-hero > .container {
+  padding: 0;
+}
+
 @media only screen and (min-width: 768px) {
   .section-hero {
-    background-image: url(../img/hero/png/Glass-effect-tab1x-min.png);
-    background-image: url(../img/hero/webp/Glass-effect-tab1x.webp);
-    height: 1024px;
+    min-height: 1024px;
     padding-top: 32px;
     padding-bottom: 32px;
-    background-size: 50% 100%;
   }
-}
-@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
-  .section-hero {
-    background-image: url(../img/hero/png/Glass-effect-tab2x-min.png);
-    background-image: url(../img/hero/webp/Glass-effect-tab2x.webp);
+
+  .section-hero::before {
+    left: -143px;
+    width: 720px;
+    background: repeating-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5) 1px,
+      rgba(0, 0, 0, 0.8) 11px,
+      rgba(0, 0, 0, 0.9) 11px,
+      rgba(0, 0, 0, 0.9) 12px,
+      rgba(0, 0, 0, 0) 72px
+    );
   }
 }
 @media only screen and (min-width: 1440px) {
   .section-hero {
-    background-image: url(../img/hero/png/Glass-effect-desc1x-min.png);
-    background-image: url(../img/hero/webp/Glass-effect-desc1x.webp);
     padding-bottom: 32px;
     padding-top: 32px;
-    height: 900px;
-    background-size: contain;
+    min-height: 900px;
     margin-bottom: 96px;
   }
-}
 
-@media only screen and (min-width: 1440px) and (min-resolution: 192dpi) {
-  .section-hero {
-    background-image: url(../img/hero/png/Glass-effect-desc2x-min.png);
-    background-image: url(../img/hero/webp/Glass-effect-desc2x.webp);
+  .section-hero::before {
+    left: -6px;
   }
 }
 
-@media only screen and (min-width: 2048px) {
-  .section-hero {
-    background-image: url(../img/hero/png/Glass-effect-desc3x-min.png);
-    background-image: url(../img/hero/webp/Glass-effect-desc3x.webp);
-  }
-}
-
-@media only screen and (min-width: 1441px) {
-  .section-hero {
-    background-size: 50% 100%;
-  }
-}
 .logo-lloyd-hero {
   max-width: 343px;
   margin-bottom: 212px;
