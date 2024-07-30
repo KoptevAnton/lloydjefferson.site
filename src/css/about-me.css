@@ -1,0 +1,329 @@
+.about-conteiner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-me-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.aboutme-header-list {
+  max-width: 343px;
+  height: 500px;
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 24px;
+  background: #242527;
+}
+
+.aboutme-header-list.photo {
+  padding: 0;
+  overflow: hidden;
+}
+
+.about-me-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.aboutme-title {
+  color: #fafafa;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 117%;
+}
+
+.word-functional {
+  color: #ed3b44;
+}
+
+.word-websites {
+  color: #fafafa66;
+}
+
+.aboutme-accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-me-subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(250, 250, 250, 0.4);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 300ms ease-in-out;
+}
+
+.aboutme-item-icon {
+  fill: none;
+  stroke: #fff;
+}
+
+.aboutme-accordion-btn {
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  cursor: pointer;
+  transition: transform 300ms ease-in-out;
+  background-color: transparent;
+}
+.aboutme-accordion-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.text-role-education {
+  gap: 10px;
+}
+
+.aboutme-item-text {
+  color: #fafafa;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+.about-me-swiper-conteiner {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+  min-width: 0;
+}
+
+.about-me-swiper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  width: 260px;
+  min-width: 0;
+}
+
+.swiper-wrapper {
+  display: flex;
+  min-width: 0;
+  width: 260px;
+}
+
+.swiper-icon {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-shrink: 0;
+  border-radius: 100px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  stroke-width: 1px;
+  stroke: rgba(250, 250, 250, 0.2);
+  justify-content: center;
+  align-items: center;
+  color: #fafafa;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+.aboutme-next {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  cursor: pointer;
+  stroke: #3b3b3b;
+  z-index: 999;
+  background-color: transparent;
+}
+
+.aboutme-header-item:hover .aboutme-accordion-btn,
+.aboutme-accordion-btn:hover {
+  border: 1px solid #fff;
+  transform: scale(1.1);
+}
+
+.swiper-element-active > .swiper-icon {
+  background-color: #ed3b44;
+}
+
+button.aboutme-next {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  cursor: pointer;
+  stroke: #3b3b3b;
+  z-index: 999;
+  background-color: blue;
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  .about-conteiner {
+    gap: 64px;
+  }
+
+  .aboutme-header-list {
+    max-width: 704px;
+    height: 700px;
+    padding-top: 64px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  .aboutme-title {
+    font-size: 38px;
+    font-size: 38px;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    text-align: left;
+  }
+
+  .about-me-swiper-conteiner {
+    width: 704px;
+  }
+
+  .about-me-swiper {
+    width: 600px;
+  }
+
+  .swiper-icon {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+  }
+
+  .aboutme-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .aboutme-accordion-text {
+    gap: 10px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+
+  .aboutme-accordion-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) {
+  .about-conteiner {
+    gap: 96px;
+  }
+
+  .about-me-header {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .aboutme-header-list {
+    width: 680px;
+    height: 700px;
+  }
+
+  .about-me-swiper-conteiner {
+    width: 1312px;
+  }
+
+  .about-me-swiper {
+    width: 1200px;
+  }
+
+  .aboutme-item-text {
+    width: 612px;
+    margin-left: 696px;
+  }
+
+  .aboutme-accordion-text.text-line {
+    gap: 32px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+}
+
+/* swiper */
+.about-me-swiper-conteiner {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+  min-width: 0;
+}
+
+.aboutme-swiper-wrapper {
+  display: flex;
+  min-width: 0;
+  width: 260px;
+}
+
+.btn-aboutswiper-next {
+  background-color: transparent;
+  border: none;
+}
+
+.aboutme-next {
+  border-radius: 100px;
+}
+
+.swiper-element-active > .swiper-icon {
+  background-color: #ed3b44;
+}
+
+.aboutme-next {
+  fill: none;
+  cursor: pointer;
+  stroke: #3b3b3b;
+  z-index: 999;
+}
+
+/* accordion */
+.aboutme-accordion-list.js-enabled .aboutme-accordion-text {
+  visibility: hidden;
+}
+
+.aboutme-accordion-list.is-active .aboutme-accordion-text {
+  visibility: visible;
+}
+
+.aboutme-accordion-list .aboutme-accordion-text {
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-timing-function: ease;
+}
+
+.aboutme-next {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.aboutme-next:hover {
+  transform: scale(1.1);
+}

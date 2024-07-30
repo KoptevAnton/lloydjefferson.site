@@ -1,2 +1,64 @@
 <header class="header">
+  <div class="container">
+    <div class="header-content-wrap">
+      <a href="./index.html" class="logo">
+        <img
+          srcset="
+            ./img/header/logo.jpg    1x,
+            ./img/header/logo@2x.jpg 2x,
+            ./img/header/logo@3x.jpg 3x
+          "
+          src="./img/logo.jpg"
+          class="logo-img"
+          alt="Lloyd Jefferson"
+        />
+        <span class="logo-text">jefferson&ast;</span>
+      </a>
+      <div class="menu">
+        <button class="menu-btn">Menu</button>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a class="menu-link" href="#about-me">About me</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#benefits">Benefits</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#projects">Projects</a>
+          </li>
+          <li class="menu-item"><a class="menu-link" href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <button class="mobile-menu-btn">
+        <svg class="open-menu-mob">
+          <use href="./img/icons.svg#burger" class="open-menu-mob-icon"></use>
+        </svg>
+      </button>
+      <a href="#work-together" class="order-btn">Order the project</a>
+    </div>
+  </div>
 </header>
+<div class="modal">
+  <div class="mobile-menu-wrap">
+    <div class="container">
+      <button class="close-menu-btn">
+        <svg class="close-menu">
+          <use href="./img/icons.svg#close" class="close-icon"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu-list">
+        <li class="menu-item">
+          <a class="menu-link" href="#about-me">About me</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#benefits">Benefits</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#projects">Projects</a>
+        </li>
+        <li class="menu-item"><a class="menu-link" href="#faq">FAQ</a></li>
+      </ul>
+      <a class="menu-link order" href="#work-together">Order the project</a>
+    </div>
+  </div>
+</div>
