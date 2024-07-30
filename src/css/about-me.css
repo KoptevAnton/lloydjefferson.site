@@ -77,7 +77,7 @@
 .aboutme-accordion-btn {
   width: 36px;
   height: 36px;
-  padding: 10px;
+  padding: 9px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,9 +143,6 @@
   justify-content: center;
   align-items: center;
   color: #fafafa;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
 }
 
 .aboutme-next {
@@ -164,7 +161,7 @@
   transform: scale(1.1);
 }
 
-.swiper-element-active > .swiper-icon {
+.swiper-slide-active > .swiper-icon {
   background-color: #ed3b44;
 }
 
@@ -219,13 +216,17 @@ button.aboutme-next {
     height: 40px;
   }
 
+  .aboutme-accordion-container {
+    gap: 32px;
+  }
+
   .aboutme-accordion-text {
-    gap: 10px;
+    gap: 16px;
     margin-top: 8px;
-    margin-bottom: 32px;
   }
 
   .aboutme-accordion-btn {
+    padding: 10px;
     width: 40px;
     height: 40px;
   }
