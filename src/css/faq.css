@@ -20,19 +20,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 20px;
+  position: relative;
+  left: -16px;
+  border-radius: 50px;
+  padding-left: 16px;
   font-size: 20px;
   font-weight: 600;
   min-width: 265px;
   cursor: pointer;
-  transition: background-color 300ms ease-in-out, transform 300ms ease-in-out,
-    border 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out;
 }
 
 .title-list:hover {
-  border: 1px solid #fff;
-  background-color: rgba(250, 250, 250, 0.2);
-  transform: scale(1.03);
+  box-shadow: 6px 6px 25px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 
 .text-faq {

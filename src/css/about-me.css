@@ -156,14 +156,17 @@
 }
 
 .aboutme-header-item {
-  border-radius: 20px;
+  position: relative;
+  left: -10px;
+  border-radius: 50px;
+  padding-left: 10px;
   background-color: transparent;
-  transition: background-color 300ms ease-in-out, transform 300ms ease-in-out,
-    border 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, outline 300ms ease-in-out, 
+  transform 300ms ease-in-out;
 }
 
 .aboutme-header-item:hover {
-  border: 1px solid #fff;
+  outline: 1px solid rgba(250, 250, 250, 0.4);
   background-color: rgba(250, 250, 250, 0.2);
   transform: scale(1.02);
 }
