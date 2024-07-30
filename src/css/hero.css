@@ -40,6 +40,10 @@
   padding: 0;
 }
 
+.section-hero.container {
+  width: 100%;
+  max-width: none;
+}
 @media only screen and (min-width: 768px) {
   .section-hero {
     min-height: 1024px;
@@ -71,6 +75,9 @@
 
   .section-hero::before {
     left: -6px;
+  }
+  .section-hero.container {
+    width: 100%;
   }
 }
 
