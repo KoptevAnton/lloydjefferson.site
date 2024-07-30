@@ -161,8 +161,8 @@
   border-radius: 50px;
   padding-left: 10px;
   background-color: transparent;
-  transition: background-color 300ms ease-in-out, outline 300ms ease-in-out, 
-  transform 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, outline 300ms ease-in-out,
+    transform 300ms ease-in-out;
 }
 
 .aboutme-header-item:hover {
@@ -327,7 +327,7 @@ button.aboutme-next {
 
 /* accordion */
 .aboutme-accordion-list {
-  border-bottom: 1px solid #FAFAFA33 ;
+  border-bottom: 1px solid #fafafa33;
 }
 
 .aboutme-accordion-list.js-enabled .aboutme-accordion-text {
