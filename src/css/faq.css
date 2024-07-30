@@ -5,8 +5,6 @@
 
 .title-faq {
   font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
 }
@@ -20,24 +18,19 @@
 .title-list {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   font-size: 20px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: #fafafa;
+  min-width: 265px;
 }
 
 .text-faq {
   margin-top: 16px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
   display: none;
 }
 
 .toggle-btn {
+  flex-shrink: 0;
   background: none;
   border: none;
   cursor: pointer;
@@ -46,9 +39,10 @@
   align-items: center;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 100px;
-  padding: 10px;
-  width: 40px;
-  height: 40px;
+  padding: 7px;
+  width: 34px;
+  height: 34px;
+  margin-left: 44px;
 }
 
 .icon {
@@ -75,15 +69,25 @@
   .list-faq {
     padding: 32px 0;
   }
+
+  .last {
+    margin-left: 179px;
+  }
+
+  .text-faq {
+    max-width: 656px;
+  }
+
+  .toggle-btn {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
   .title-faq {
     margin-left: 20px;
-  }
-
-  .text-faq {
-    max-width: 656px;
   }
 
   .faq {
