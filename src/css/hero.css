@@ -125,7 +125,15 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: #fafafa;
+  transition: transform 300ms ease-in-out, border 300ms ease-in-out;
 }
+
+.link-hero:hover,
+.link-hero:focus {
+  border: 1px solid #fff;
+  transform: scale(1.04);
+}
+
 .link-hero.link-hero-email {
   width: 178px;
   padding: 10px 12px;

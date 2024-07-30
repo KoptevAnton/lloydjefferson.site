@@ -96,6 +96,12 @@
   fill: none;
   border: 1px solid rgba(250, 250, 250, 0.5);
   stroke: rgba(250, 250, 250);
+  transition: border 300ms ease-in-out;
+}
+
+.projects__button:hover,
+.projects__button:focus {
+  border: 1px solid #fff;
 }
 
 .projects__button-icon {

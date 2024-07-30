@@ -104,7 +104,7 @@ input:-webkit-autofill:active {
 .footer-btn:hover,
 .footer-btn:focus {
   background-color: #e0373f;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .footer-contact {
@@ -113,6 +113,7 @@ input:-webkit-autofill:active {
 }
 
 .footer-contact-list {
+  display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -131,13 +132,14 @@ input:-webkit-autofill:active {
   border-radius: 60px;
   padding: 10px 12px;
   gap: 4px;
-
+  transition: transform 300ms ease-in-out, border 300ms ease-in-out;
   height: 37px;
 }
+
 .footer-contact-item:hover,
 .footer-contact-item:focus {
-  border: 1px solid #fafafa;
-  transition: border 0.3s ease-in-out;
+  border: 1px solid #fff;
+  transform: scale(1.03);
 }
 
 .footer-adress-tel {
@@ -149,7 +151,6 @@ input:-webkit-autofill:active {
 
 /*tablet */
 @media screen and (min-width: 768px) {
-
   .work-together {
     padding-top: 80px;
     padding-bottom: 169px;
@@ -198,6 +199,7 @@ input:-webkit-autofill:active {
   }
 
   .footer-contact-item {
+    font-size: 16px;
     padding: 18px 32px;
     gap: 8px;
   }
@@ -211,12 +213,10 @@ input:-webkit-autofill:active {
 
 /*desktop */
 @media screen and (min-width: 1440px) {
-
   .footer-container {
     display: flex;
     justify-content: center;
   }
-
 
   .footer-input-email,
   .footer-input-comment {
