@@ -12,7 +12,8 @@
   border-radius: 20px;
   padding: 32px 24px;
   min-height: 302px !important;
-  transition: transform 300ms ease-in-out, border 300ms ease-in-out, opacity 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, border 300ms ease-in-out,
+    opacity 300ms ease-in-out;
 }
 
 .reviews-swiper-slide:hover .reviews-swiper-slide:focus {
@@ -23,7 +24,8 @@
 
 .reviews-swiper-wrapper {
   margin-bottom: 32px;
-  transition: transform 300ms ease-in-out, border 300ms ease-in-out, opacity 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, border 300ms ease-in-out,
+    opacity 300ms ease-in-out;
 }
 
 .reviews-swiper-wrapper:hover > :not(:hover) {
@@ -96,6 +98,11 @@
 .reviews-next-btn:hover,
 .reviews-next-btn:focus {
   border: 1px solid #fff;
+}
+
+.reviews-prev-btn:focus,
+.reviews-next-btn:focus {
+  background-color: rgba(224, 55, 63);
 }
 
 .swiper-button-disabled {

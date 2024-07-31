@@ -125,12 +125,14 @@ input:-webkit-autofill:active {
   background-color: #ed3b44;
   line-height: normal;
   letter-spacing: normal;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
   color: #fafafa;
 }
 
 .footer-btn:hover,
 .footer-btn:focus {
+  border: 1px solid #fff;
   background-color: #e0373f;
   transform: scale(1.1);
 }
@@ -142,11 +144,10 @@ input:-webkit-autofill:active {
 
 .footer-contact-list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
   gap: 4px;
 }
 
@@ -159,13 +160,11 @@ input:-webkit-autofill:active {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
   padding: 10px 12px;
-  gap: 4px;
   transition: transform 300ms ease-in-out, border 300ms ease-in-out;
   height: 37px;
 }
 
-.footer-contact-item:hover,
-.footer-contact-item:focus {
+.footer-contact-item:hover {
   border: 1px solid #fff;
   transform: scale(1.03);
 }
@@ -173,6 +172,7 @@ input:-webkit-autofill:active {
 .footer-adress-tel {
   width: 94px;
 }
+
 .footer-adress-email {
   width: 154px;
 }
@@ -383,19 +383,21 @@ input:-webkit-autofill:active {
   justify-content: center;
   align-items: center;
   position: fixed;
-  border-radius: 50%;
   bottom: 15px;
   right: 15px;
+  border-radius: 50%;
   z-index: 99;
-  color: #ffffff;
   cursor: pointer;
   padding: 0;
   background-color: rgba(237, 59, 68);
-  transition: background-color 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, background-color 300ms ease-in-out,
+    outline 300ms ease-in-out;
 }
 
-.toTopImg:hover,
-.toTopImg:focus {
+.btnToTop:hover,
+.btnToTop:focus {
+  transform: scale(1.1);
+  outline: 1px solid #fff;
   background-color: rgba(224, 55, 63);
   border-radius: 50%;
 }
@@ -410,8 +412,12 @@ input:-webkit-autofill:active {
   width: 40px;
   height: 40px;
   fill: none;
-  stroke: currentColor;
-  transition: color 300ms ease-in-out;
+  stroke: #ffffff;
+  transition: stroke 300ms ease-in-out;
+}
+
+.btnToTop.show {
+  display: block;
 }
 
 /* tablet */
