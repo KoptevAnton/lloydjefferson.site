@@ -19,15 +19,35 @@
   top: -70%;
   left: -70%;
   z-index: -99999;
-  background-image: url(../img/covers/background-ellipse.svg),
-    url(../img/covers/background-ellipse.svg),
-    url(../img/covers/background-ellipse.svg);
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: top left, top right, 50% bottom;
 }
 
 .covers-background.animated {
   animation: rotation 30s linear infinite;
+}
+
+.covers-spot {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: red;
+  border-radius: 50%;
+  filter: blur(172px);
+  opacity: 0.6;
+}
+
+.covers-spot-1 {
+  top: 0;
+  left: 0;
+}
+
+.covers-spot-2 {
+  top: 0;
+  right: 0;
+}
+
+.covers-spot-3 {
+  bottom: 0;
+  right: 50%;
 }
 
 .covers-wrapper {
