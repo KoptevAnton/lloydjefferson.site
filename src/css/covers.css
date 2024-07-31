@@ -29,7 +29,7 @@
   position: absolute;
   width: 350px;
   height: 350px;
-  background: #ed3b44;
+  background: var(--main-color);
   border-radius: 50%;
   filter: blur(172px);
   opacity: 0.6;
@@ -83,8 +83,9 @@
 }
 
 .covers-image:hover {
-  box-shadow: 0 0 4px #ed3b44, 0 0 8px #ed3b44, 0 0 12px #ed3b44,
-    0 0 16px #ed3b44, 0 0 20px #ed3b44;
+  box-shadow: 0 0 4px var(--hover-color), 0 0 8px var(--hover-color),
+    0 0 12px var(--hover-color), 0 0 16px var(--hover-color),
+    0 0 20px var(--hover-color);
   scale: 1.1;
 }
 
@@ -105,8 +106,9 @@
 }
 
 .covers-full-image {
-  box-shadow: 0 0 4px #ed3b44, 0 0 8px #ed3b44, 0 0 12px #ed3b44,
-    0 0 16px #ed3b44, 0 0 20px #ed3b44;
+  box-shadow: 0 0 4px var(--hover-color), 0 0 8px var(--hover-color),
+    0 0 12px var(--hover-color), 0 0 16px var(--hover-color),
+    0 0 20px var(--hover-color);
 }
 
 /* Tablet */

@@ -25,7 +25,7 @@
 
 .benefits-wrap {
   display: flex;
-  background: #ed3b44;
+  background: var(--main-color);
   border-radius: 10px;
   width: 48px;
   height: 48px;
@@ -94,7 +94,7 @@
 .benefits-button:focus {
   border: 1px solid #fff;
   transform: scale(1.1);
-  background-color: rgba(224, 55, 63);
+  background-color: var(--hover-color);
 }
 
 @media screen and (min-width: 768px) {

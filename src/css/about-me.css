@@ -41,7 +41,7 @@
 }
 
 .word-functional {
-  color: #ed3b44;
+  color: var(--main-color);
 }
 
 .word-websites {
@@ -168,11 +168,11 @@
 }
 
 .aboutme-accordion-btn:focus {
-  background-color: rgba(224, 55, 63);
+  background-color: var(--hover-color);
 }
 
 .swiper-slide-active > .swiper-icon {
-  background-color: #ed3b44;
+  background-color: var(--main-color);
 }
 
 .btn-aboutswiper-next {
@@ -189,7 +189,7 @@
 }
 
 .btn-aboutswiper-next:focus {
-  background-color: rgba(224, 55, 63, 1);
+  background-color: var(--main-color);
 }
 
 .btn-aboutswiper-next:hover .aboutme-icon {
@@ -321,7 +321,7 @@
 }
 
 .swiper-element-active > .swiper-icon {
-  background-color: #ed3b44;
+  background-color: var(--main-color);
 }
 
 /* accordion */

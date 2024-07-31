@@ -4,8 +4,8 @@
   align-items: flex-end;
   background: linear-gradient(
     to right,
-    #ed3b44,
-    #69292d 32%,
+    var(--main-color),
+    var(--middle-color) 32%,
     #1c1d20 50%,
     #1c1d20 100%
   );

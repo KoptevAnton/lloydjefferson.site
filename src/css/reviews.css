@@ -102,7 +102,7 @@
 
 .reviews-prev-btn:focus,
 .reviews-next-btn:focus {
-  background-color: rgba(224, 55, 63);
+  background-color: var(--hover-color);
 }
 
 .swiper-button-disabled {
