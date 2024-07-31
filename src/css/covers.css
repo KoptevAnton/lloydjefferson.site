@@ -6,6 +6,11 @@
   background-color: rgba(217, 217, 217, 0.04);
 }
 
+.covers.container {
+  width: 100%;
+  max-width: none;
+}
+
 .covers-background {
   padding: 0;
   width: 1200px;
@@ -101,6 +106,7 @@
     gap: 50px;
     margin-bottom: 50px;
   }
+
   .covers-item {
     width: 544px;
     height: 314px;
@@ -109,6 +115,10 @@
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
+  .covers.container {
+    width: 1440px;
+  }
+
   .covers-background {
     width: 1800px;
     height: 1800px;
