@@ -25,7 +25,7 @@
   align-items: center;
   position: relative;
   left: -16px;
-  border-radius: 50px;
+  border-radius: 25px;
   padding-left: 16px;
   font-size: 20px;
   font-weight: 600;
@@ -83,6 +83,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .title-list {
+    border-radius: 50px;
+  }
+
   .faq {
     margin-bottom: 96px;
   }
