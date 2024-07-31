@@ -22,6 +22,34 @@ input:-webkit-autofill:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-together {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 290px;
+  width: 720px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5) 1px,
+    rgba(0, 0, 0, 0.8) 4px,
+    rgba(0, 0, 0, 0.9) 4px,
+    rgba(0, 0, 0, 0.9) 5px,
+    rgba(0, 0, 0, 0) 72px
+  );
+  pointer-events: none;
+  opacity: 0.08;
+  z-index: -1;
 }
 
 .footer-logo-text {
@@ -156,6 +184,10 @@ input:-webkit-autofill:active {
     padding-bottom: 169px;
   }
 
+  .footer-container::before {
+    left: 570px;
+  }
+
   .footer-logo-text {
     width: 542px;
     display: flex;
@@ -216,6 +248,10 @@ input:-webkit-autofill:active {
   .footer-container {
     display: flex;
     justify-content: center;
+  }
+
+  .footer-container::before {
+    left: 1040px;
   }
 
   .footer-input-email,
@@ -363,6 +399,13 @@ input:-webkit-autofill:active {
   transform: scale(1.1);
   outline: 1px solid #fff;
   background-color: rgba(224, 55, 63);
+  border-radius: 50%;
+}
+
+.btnToTop.show {
+  display: block;
+  width: 50px;
+  height: 50px;
 }
 
 .toTopImg {
