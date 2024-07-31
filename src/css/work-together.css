@@ -26,7 +26,7 @@ input:-webkit-autofill:active {
   overflow: hidden;
 }
 
-.footer-container {
+.work-together {
   position: relative;
   overflow: hidden;
 }
@@ -35,20 +35,20 @@ input:-webkit-autofill:active {
   content: '';
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 290px;
   width: 720px;
   height: 100%;
   background: repeating-linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5) 1px,
-    rgba(0, 0, 0, 0.8) 11px,
-    rgba(0, 0, 0, 0.9) 11px,
-    rgba(0, 0, 0, 0.9) 12px,
+    rgba(0, 0, 0, 0.8) 4px,
+    rgba(0, 0, 0, 0.9) 4px,
+    rgba(0, 0, 0, 0.9) 5px,
     rgba(0, 0, 0, 0) 72px
   );
   pointer-events: none;
-  opacity: 0.1;
+  opacity: 0.08;
   z-index: -1;
 }
 
