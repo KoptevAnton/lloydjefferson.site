@@ -29,7 +29,7 @@
   position: absolute;
   width: 350px;
   height: 350px;
-  background: red;
+  background: #ed3b44;
   border-radius: 50%;
   filter: blur(172px);
   opacity: 0.6;
