@@ -90,9 +90,10 @@
   transition: transform 300ms ease-in-out;
 }
 
-.benefits-button:hover {
+.benefits-button:hover,
+.benefits-button:focus {
   border: 1px solid #fff;
-  transform: scale(1.04);
+  transform: scale(1.1);
   background-color: rgba(224, 55, 63);
 }
 

@@ -75,7 +75,7 @@
 .projects__link:hover,
 .projects__link:focus {
   background-color: rgba(224, 55, 63);
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .projects__button-wrapper {
@@ -98,10 +98,13 @@
   stroke: rgba(250, 250, 250);
   transition: border 300ms ease-in-out;
 }
-
-.projects__button:hover,
-.projects__button:focus {
+.projects__button:hover {
   border: 1px solid #fff;
+}
+
+.projects__button:focus {
+  background-color: rgba(224, 55, 63, 1);
+  fill: none;
 }
 
 .projects__button-icon {

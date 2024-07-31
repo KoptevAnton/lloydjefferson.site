@@ -98,6 +98,11 @@
   border: 1px solid #fff;
 }
 
+.reviews-prev-btn:focus,
+.reviews-next-btn:focus {
+  background-color: rgba(224, 55, 63);
+}
+
 .swiper-button-disabled {
   border: 1px solid #fafafa33;
   stroke: #3b3b3b;
