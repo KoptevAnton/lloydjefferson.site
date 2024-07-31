@@ -1,9 +1,6 @@
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
-
-import { faqItems } from './elements.js';
-
 document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.list-faq');
+
   faqItems.forEach(item => {
     const question = item.querySelector('.title-list');
     const toggleBtn = item.querySelector('.toggle-btn');
@@ -11,24 +8,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const iconOpen = toggleBtn.querySelector('.icon-open');
     const iconClose = toggleBtn.querySelector('.icon-close');
 
-    answer.style.display = 'none';
+    // Initial setup
     item.setAttribute('aria-expanded', 'false');
     iconOpen.style.display = 'block';
     iconClose.style.display = 'none';
 
     question.addEventListener('click', () => {
-      const isOpen = answer.style.display === 'block';
+      const isOpen = item.getAttribute('aria-expanded') === 'true';
 
       if (!isOpen) {
-        answer.style.display = 'block';
         item.setAttribute('aria-expanded', 'true');
         iconOpen.style.display = 'none';
         iconClose.style.display = 'block';
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.opacity = '1';
       } else {
-        answer.style.display = 'none';
         item.setAttribute('aria-expanded', 'false');
         iconOpen.style.display = 'block';
         iconClose.style.display = 'none';
+        answer.style.maxHeight = '0';
+        answer.style.opacity = '0';
       }
     });
   });

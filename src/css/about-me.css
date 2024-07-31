@@ -139,7 +139,7 @@
   border-radius: 50px;
   background-color: transparent;
   transition: background-color 300ms ease-in-out, outline 300ms ease-in-out,
-  transform 300ms ease-in-out;
+    transform 300ms ease-in-out;
 }
 
 .aboutme-header-item:hover {
