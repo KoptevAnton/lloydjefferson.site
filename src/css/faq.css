@@ -37,7 +37,7 @@
   font-weight: 600;
   min-width: 265px;
   cursor: pointer;
-  transition: box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out;
 }
 
 .title-list:hover {
@@ -77,12 +77,13 @@
   width: 34px;
   height: 34px;
   margin-left: 44px;
-  transition: border 300ms ease-in-out;
+  fill: none;
+  transition: background-color 300ms ease-in-out, border 300ms ease-in-out;
 }
 
 .toggle-btn:focus {
   background-color: rgba(224, 55, 63, 1);
-  fill: none;
+  border: 1px solid #fff;
 }
 
 .icon {

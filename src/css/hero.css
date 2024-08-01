@@ -125,7 +125,7 @@
   }
 }
 
-.link-hero {
+.li-hero {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,18 +142,46 @@
   transition: transform 300ms ease-in-out, border 300ms ease-in-out;
 }
 
-.link-hero:hover,
-.link-hero:focus {
-  border: 1px solid #fff;
+.li-hero:hover {
   transform: scale(1.04);
+  border: 1px solid #fff;
 }
 
-.link-hero.link-hero-email {
+.li-hero.li-hero-email {
   width: 178px;
-  padding: 10px 12px;
 }
+
+.link-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.link-hero:focus {
+  transform: scale(1.4);
+  color: rgba(224, 55, 63, 1);
+}
+
+.link-hero-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.link-hero-email:focus {
+  color: rgba(224, 55, 63, 1);
+  transform: scale(1.1);
+}
+
 @media only screen and (min-width: 768px) {
-  .link-hero {
+  .li-hero {
     font-size: 16px;
     line-height: 1.2;
     width: 55px;
@@ -162,9 +190,8 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .link-hero.link-hero-email {
+  .li-hero.li-hero-email {
     width: 225px;
-    padding: 18px 24px;
   }
 }
 @media (max-width: 367.98px) {
