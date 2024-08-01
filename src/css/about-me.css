@@ -41,7 +41,7 @@
 }
 
 .word-functional {
-  color: #ed3b44;
+  color: var(--main-color);
 }
 
 .word-websites {
@@ -170,12 +170,12 @@
 
 .aboutme-accordion-btn:focus {
   border: 1px solid #fff;
-  background-color: rgba(224, 55, 63);
+  background-color: var(--hover-color);
   transform: scale(1.05);
 }
 
 .swiper-slide-active > .swiper-icon {
-  background-color: #ed3b44;
+  background-color: var(--main-color);
 }
 
 .btn-aboutswiper-next {
@@ -195,7 +195,7 @@
 .btn-aboutswiper-next:focus {
   transform: scale(1.05);
   border: 1px solid #fafafa;
-  background-color: rgba(224, 55, 63, 1);
+  background-color: var(--main-color);
   color: #fafafa;
 }
 
@@ -328,7 +328,7 @@
 }
 
 .swiper-element-active > .swiper-icon {
-  background-color: #ed3b44;
+  background-color: var(--main-color);
 }
 
 /* accordion */

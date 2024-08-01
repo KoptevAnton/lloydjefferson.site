@@ -29,6 +29,10 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
 
+  --main-color: #c6e327;
+  --hover-color: #e0373f;
+  --middle-color: #69292d;
+
   color: #fafafa;
   background-color: #1c1d20;
 

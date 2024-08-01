@@ -36,6 +36,91 @@
   display: none;
 }
 
+.change-color {
+  display: block;
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  width: 160px;
+  height: 104px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.change-color-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  z-index: 99;
+}
+
+.change-color-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  text-decoration: none;
+  width: 120px;
+  height: 45px;
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  text-align: center;
+  padding: 14px;
+  border: none;
+  background-color: var(--main-color);
+  transition: background-color 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.change-color-btn:hover,
+.change-color-btn:focus {
+  background-color: var(--hover-color);
+  transform: scale(1.1);
+}
+
+.theme-colors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.color-option {
+  flex-basis: 48px;
+  height: 48px;
+  border-radius: 2px;
+}
+
+.red-theme-option {
+  background-color: #ed3b44;
+}
+
+.lime-theme-option {
+  background-color: #c6e327;
+}
+
+.blue-theme-option {
+  background-color: #0041e8;
+}
+
+.pink-theme-option {
+  background-color: #e6533c;
+}
+
+.aquamarine-theme-option {
+  background-color: #2b4441;
+}
+
+.orange-theme-option {
+  background-color: #ff7f08;
+}
+
 .mobile-menu-btn {
   display: flex;
   align-items: center;
@@ -161,7 +246,7 @@
   text-align: center;
   padding: 14px 31px;
   border: none;
-  background-color: #ed3b44;
+  background-color: var(--main-color);
 }
 
 @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
@@ -254,7 +339,7 @@
   }
 
   .menu-item:hover {
-    color: #ed3b44;
+    color: var(--main-color);
   }
 
   .mobile-menu-btn {
@@ -267,12 +352,12 @@
     padding: 18px 24px;
     border: none;
     line-height: 1.2;
-    background-color: #ed3b44;
+    background-color: var(--main-color);
     transition: backround-color 300ms ease-in-out, transform 300ms ease-in-out;
   }
 
   .order-btn:hover {
-    background-color: #e0373f;
+    background-color: var(--hover-color);
     transform: scale(1.05);
   }
 }
@@ -283,7 +368,7 @@
 }
 
 .logo:hover {
-  color: #e0373f;
+  color: var(--main-color);
   transform: scale(1.05);
 }
 
@@ -292,8 +377,8 @@
 }
 
 .menu-btn:hover {
-  color: #e0373f;
-  transform: scale(1.1)
+  color: var(--hover-color);
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 1440px) {

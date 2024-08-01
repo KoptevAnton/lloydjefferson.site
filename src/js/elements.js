@@ -16,6 +16,9 @@ const modal = document.querySelector('.modal');
 const closeModalBtn = document.querySelector('.close-menu-btn');
 const menuBtn = document.querySelector('.menu-btn');
 const menuList = document.querySelector('.menu-list');
+const changeColorBtn = document.querySelector('.change-color-btn');
+const changeColorModal = document.querySelector('.change-color');
+const rootStyle = document.documentElement.style;
 const body = document.body;
 // Work-together
 const formEL = document.querySelector('.footer-form-feedback');
@@ -44,6 +47,9 @@ export {
   closeModalBtn,
   menuBtn,
   menuList,
+  changeColorBtn,
+  changeColorModal,
+  rootStyle,
   body,
   formEL,
   emailEL,

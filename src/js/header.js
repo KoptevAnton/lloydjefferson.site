@@ -1,37 +1,110 @@
 import {
-    mobileModalBtn,
-    modal,
-    closeModalBtn,
-    menuBtn,
-    menuList,
-    body,
-} from './elements.js'
+  mobileModalBtn,
+  modal,
+  closeModalBtn,
+  menuBtn,
+  menuList,
+  changeColorBtn,
+  changeColorModal,
+  rootStyle,
+  body,
+} from './elements.js';
 
-mobileModalBtn.addEventListener("click",() => {
-    modal.classList.toggle("is-open");
-    body.classList.toggle('no-scroll');
-})
+mobileModalBtn.addEventListener('click', () => {
+  modal.classList.toggle('is-open');
+  body.classList.toggle('no-scroll');
+});
 
-closeModalBtn.addEventListener("click",() => {
-    modal.classList.remove("is-open");
-    body.classList.toggle('no-scroll');
-})
+closeModalBtn.addEventListener('click', () => {
+  modal.classList.remove('is-open');
+  body.classList.toggle('no-scroll');
+});
 
-modal.addEventListener("click", (evt) => {
-    if (evt.target.nodeName !== "A") {
-        return;
-    }
-    modal.classList.remove("is-open");
-})
+modal.addEventListener('click', evt => {
+  if (evt.target.nodeName !== 'A') {
+    return;
+  }
+  modal.classList.remove('is-open');
+});
 
-menuBtn.addEventListener("click",() => {
-    menuList.classList.toggle("is-open");
-})
+menuBtn.addEventListener('click', () => {
+  menuList.classList.toggle('is-open');
+});
 
-menuList.addEventListener("click", (evt) => {
-        if (evt.target.nodeName !== "A") {
-            return;
-        }
-        menuList.classList.remove("is-open");
-    }
-)
+menuList.addEventListener('click', evt => {
+  if (evt.target.nodeName !== 'A') {
+    return;
+  }
+  menuList.classList.remove('is-open');
+});
+
+const themes = {
+  red: {
+    mainColor: '#ed3b44',
+    hoverColor: '#e0373f',
+    middleColor: '#69292d',
+  },
+  lime: {
+    mainColor: '#c6e327',
+    hoverColor: '#b3d11f',
+    middleColor: '#596808',
+  },
+  blue: {
+    mainColor: '#0041e8',
+    hoverColor: '#0a3dca',
+    middleColor: '#001958',
+  },
+  pink: {
+    mainColor: '#e6533c',
+    hoverColor: '#d24e39',
+    middleColor: '#9f3626',
+  },
+  aquamarine: {
+    mainColor: '#2b4441',
+    hoverColor: '#31524f',
+    middleColor: '#1e3633',
+  },
+  orange: {
+    mainColor: '#ff7f08',
+    hoverColor: '#e87809',
+    middleColor: '#ac5300',
+  },
+};
+
+const savedTheme = JSON.parse(localStorage.getItem('savedTheme'));
+if (savedTheme) {
+  const newMainColor = themes[savedTheme].mainColor;
+  const newHoverColor = themes[savedTheme].hoverColor;
+  const newMiddleColor = themes[savedTheme].middleColor;
+
+  rootStyle.setProperty('--main-color', newMainColor);
+  rootStyle.setProperty('--hover-color', newHoverColor);
+  rootStyle.setProperty('--middle-color', newMiddleColor);
+}
+
+changeColorBtn.addEventListener('click', showChangeColorModal);
+
+function showChangeColorModal(event) {
+  event.preventDefault();
+  changeColorModal.classList.add('is-open');
+  changeColorModal.addEventListener('click', changeTheme);
+}
+
+function changeTheme(event) {
+  event.preventDefault();
+  //   console.dir(event.target);
+  if (event.target.nodeName !== 'LI') {
+    return;
+  } else {
+    const selectedTheme = event.target.dataset.theme;
+    const newMainColor = themes[selectedTheme].mainColor;
+    const newHoverColor = themes[selectedTheme].hoverColor;
+    const newMiddleColor = themes[selectedTheme].middleColor;
+    localStorage.setItem('savedTheme', JSON.stringify(selectedTheme));
+    rootStyle.setProperty('--main-color', newMainColor);
+    rootStyle.setProperty('--hover-color', newHoverColor);
+    rootStyle.setProperty('--middle-color', newMiddleColor);
+    changeColorModal.removeEventListener('click', changeTheme);
+    changeColorModal.classList.remove('is-open');
+  }
+}
