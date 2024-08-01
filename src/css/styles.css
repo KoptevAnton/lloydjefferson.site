@@ -5,7 +5,7 @@
   |============================
 */
 
-@import url('https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css');
+@import url('modern-normalize/modern-normalize.css');
 
 @import url('./fonts.css');
 @import url('./container.css');
