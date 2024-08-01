@@ -24,7 +24,8 @@
   transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
 }
 
-.reviews-swiper-wrapper:hover > :not(:hover) {
+.reviews-swiper-wrapper:hover > :not(:hover),
+.reviews-swiper-wrapper:focus > :not(:focus) {
   transform: scale(0.8);
   opacity: 0.25;
 }
