@@ -1,6 +1,5 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import '../css/work-together.css';
 import { postData } from './swagger-api.js';
 import {
   formEL,

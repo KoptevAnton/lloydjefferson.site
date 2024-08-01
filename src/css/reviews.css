@@ -12,26 +12,21 @@
   border-radius: 20px;
   padding: 32px 24px;
   min-height: 302px !important;
-  transition: transform 300ms ease-in-out, border 300ms ease-in-out,
-    opacity 300ms ease-in-out;
+  transition: border 300ms ease-in-out;
 }
 
-.reviews-swiper-slide:hover .reviews-swiper-slide:focus {
-  border: 1px solid rgba(250, 250, 250, 0.15);
-  transform: scale(0.85);
-  opacity: 0.35;
+.reviews-swiper-slide:hover {
+  border: 1px solid rgba(250, 250, 250, 0.3);
 }
 
 .reviews-swiper-wrapper {
   margin-bottom: 32px;
-  transition: transform 300ms ease-in-out, border 300ms ease-in-out,
-    opacity 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
 }
 
 .reviews-swiper-wrapper:hover > :not(:hover) {
-  border: 1px solid rgba(250, 250, 250, 0.15);
-  transform: scale(0.85);
-  opacity: 0.35;
+  transform: scale(0.8);
+  opacity: 0.25;
 }
 
 .reviews-desc {

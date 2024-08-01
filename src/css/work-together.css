@@ -125,13 +125,14 @@ input:-webkit-autofill:active {
   background-color: var(--main-color);
   line-height: normal;
   letter-spacing: normal;
-  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
   color: #fafafa;
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
 }
 
 .footer-btn:hover,
 .footer-btn:focus {
+  transform: scale(1.1);
   border: 1px solid #fff;
   background-color: var(--hover-color);
   transform: scale(1.1);
@@ -151,6 +152,14 @@ input:-webkit-autofill:active {
   gap: 4px;
 }
 
+.footer-contact-item-email {
+  width: 178px;
+}
+
+.footer-contact-item-tel {
+  width: 118px;
+}
+
 .footer-contact-item {
   display: flex;
   align-items: center;
@@ -159,7 +168,6 @@ input:-webkit-autofill:active {
   color: #fafafa;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
-  padding: 10px 12px;
   transition: transform 300ms ease-in-out, border 300ms ease-in-out;
   height: 37px;
 }
@@ -173,8 +181,20 @@ input:-webkit-autofill:active {
   width: 94px;
 }
 
-.footer-adress-email {
-  width: 154px;
+.footer-adress-email,
+.footer-adress-tel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.footer-adress-email:focus,
+.footer-adress-tel:focus {
+  transform: scale(1.1);
+  color: rgba(224, 55, 63, 1);
 }
 
 /*tablet */
@@ -230,16 +250,21 @@ input:-webkit-autofill:active {
     margin-right: 16px;
   }
 
-  .footer-contact-item {
-    font-size: 16px;
-    padding: 18px 32px;
+  .footer-contact-list {
     gap: 8px;
   }
-  .footer-adress-tel {
-    width: 107px;
+
+  .footer-contact-item {
+    font-size: 16px;
+    gap: 8px;
   }
-  .footer-adress-email {
-    width: 175px;
+
+  .footer-contact-item-email {
+    width: 239px;
+  }
+
+  .footer-contact-item-tel {
+    width: 171px;
   }
 }
 
@@ -266,12 +291,6 @@ input:-webkit-autofill:active {
   .footer-btn {
     width: 150px;
     height: 150px;
-  }
-  .footer-adress-tel {
-    width: 107px;
-  }
-  .footer-adress-email {
-    width: 175px;
   }
 }
 
