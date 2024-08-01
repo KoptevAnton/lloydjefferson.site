@@ -11,17 +11,33 @@
         </h3>
       </li>
       <li class="aboutme-header-list photo">
-        <img
-          srcset="
-            ./img/about-me/Jefferson-photo-x1.jpg 1x,
-            ./img/about-me/Jefferson-photo-x2.jpg 2x,
-            ./img/about-me/Jefferson-photo-x3.jpg 3x
-          "
-          src="./img/about-me/Jefferson-photo-x1.jpg"
-          alt="Lloyd Jefferson"
-          class="about-me-img"
-          loading="lazy"
-        />
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./img/about-me/Jefferson-photo-x1.jpg 1x,
+              ./img/about-me/Jefferson-photo-x2.jpg 2x,
+              ./img/about-me/Jefferson-photo-x3.jpg 3x
+            "
+            type="image/jpg"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ./img/about-me/Jefferson-photo-mob-x1.webp 1x,
+              ./img/about-me/Jefferson-photo-mob-x2.webp 2x,
+              ./img/about-me/Jefferson-photo-mob-x3.webp 3x
+            "
+            type="image/webp"
+          />
+          <img
+            src="./img/about-me/Jefferson-photo-x1.jpg"
+            alt="Lloyd Jefferson"
+            class="about-me-img"
+            data-name="lloyd-jefferson"
+            loading="lazy"
+          />
+        </picture>
       </li>
     </ul>
     <ul class="aboutme-accordion-container">
