@@ -29,6 +29,7 @@ modal.addEventListener('click', evt => {
   modal.classList.remove('is-open');
   body.classList.toggle('no-scroll');
 });
+
 menuBtn.addEventListener('click', () => {
   isMenuOpen = !isMenuOpen;
   menuList.classList.toggle('is-open');
@@ -52,6 +53,10 @@ menuList.addEventListener('click', evt => {
   if (evt.target.nodeName !== 'A') {
     return;
   }
+  menuItems.forEach(item => {
+    item.classList.remove('visible');
+  });
+  isMenuOpen = !isMenuOpen;
   menuList.classList.remove('is-open');
 });
 
