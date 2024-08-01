@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function onInputEmail() {
-  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?(\.[a-zA-Z]{2,3})+$/;
   if (!emailPattern.test(emailEL.value) || emailEL.value.trim().length <= 0) {
     wrongEmailEL.classList.add('error-message');
 
@@ -57,7 +57,7 @@ function onInputComment() {
 }
 
 function checkFormValidity() {
-  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?(\.[a-zA-Z]{2,3})+$/;
   const isEmailValid =
     emailPattern.test(emailEL.value) && emailEL.value.trim().length > 0;
   const isCommentValid = commentEL.value.trim().length > 0;
