@@ -75,12 +75,14 @@
   padding: 14px;
   border: none;
   background-color: var(--main-color);
-  transition: background-color 300ms ease-in-out, transform 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, transform 300ms ease-in-out,
+    border 300ms ease-in-out;
 }
 
 .change-color-btn:hover,
 .change-color-btn:focus {
   background-color: var(--hover-color);
+  border: 1px solid #fff;
   transform: scale(1.1);
 }
 

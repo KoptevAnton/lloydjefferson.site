@@ -194,7 +194,7 @@ input:-webkit-autofill:active {
 .footer-adress-email:focus,
 .footer-adress-tel:focus {
   transform: scale(1.1);
-  color: rgba(224, 55, 63, 1);
+  color: var(--hover-color);
 }
 
 /*tablet */
