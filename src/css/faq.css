@@ -82,7 +82,7 @@
 }
 
 .toggle-btn:focus {
-  background-color: rgba(224, 55, 63, 1);
+  background-color: var(--hover-color);
   border: 1px solid #fff;
 }
 
