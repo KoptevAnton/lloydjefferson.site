@@ -87,13 +87,17 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   background-color: transparent;
-  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, border 300ms ease-in-out,
+    background-color 300ms ease-in-out;
 }
 
-.benefits-button:hover,
-.benefits-button:focus {
-  border: 1px solid #fff;
+.benefits-button:hover {
   transform: scale(1.1);
+  border: 1px solid #fff;
+}
+.benefits-button:focus {
+  transform: scale(1.1);
+  border: 1px solid #fff;
   background-color: rgba(224, 55, 63);
 }
 

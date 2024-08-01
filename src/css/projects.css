@@ -69,13 +69,15 @@
   border-radius: 60px;
   background: rgba(237, 59, 68);
   color: rgba(250, 250, 250);
-  transition: background-color 300ms ease-in-out, transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, background-color 300ms ease-in-out,
+    outline 300ms ease-in-out;
 }
 
 .projects__link:hover,
 .projects__link:focus {
-  background-color: rgba(224, 55, 63);
   transform: scale(1.1);
+  background-color: rgba(224, 55, 63);
+  outline: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .projects__button-wrapper {
@@ -96,7 +98,7 @@
   fill: none;
   border: 1px solid rgba(250, 250, 250, 0.5);
   stroke: rgba(250, 250, 250);
-  transition: border 300ms ease-in-out;
+  transition: border 300ms ease-in-out, background-color 300ms ease-in-out;
 }
 .projects__button:hover {
   border: 1px solid #fff;
