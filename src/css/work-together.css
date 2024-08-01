@@ -402,8 +402,8 @@ input:-webkit-autofill:active {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 70px;
+  right: 10px;
   border-radius: 50%;
   z-index: 99;
   cursor: pointer;
@@ -418,7 +418,6 @@ input:-webkit-autofill:active {
   transform: scale(1.1);
   outline: 1px solid #fff;
   background-color: var(--hover-color);
-  border-radius: 50%;
 }
 
 .btnToTop.show {
@@ -441,8 +440,19 @@ input:-webkit-autofill:active {
 
 /* tablet */
 @media screen and (min-width: 768px) {
-  .toTopImg {
-    width: 50px;
-    height: 50px;
+  .btnToTop.show {
+    width: 75px;
+    height: 75px;
+    bottom: 100px;
+    right: 10px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .btnToTop.show {
+    width: 95px;
+    height: 95px;
+    bottom: 120px;
+    right: 15px;
   }
 }
