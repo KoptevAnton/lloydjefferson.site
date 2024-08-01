@@ -184,6 +184,7 @@
 }
 
 .mobile-menu-wrap {
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
@@ -206,6 +207,7 @@
 }
 
 .mobile-menu-wrap::before {
+  z-index: -1;
   content: '';
   position: absolute;
   top: 0;
