@@ -8,7 +8,9 @@ import {
   changeColorModal,
   rootStyle,
   body,
+  menuItems,
 } from './elements.js';
+let isMenuOpen = false;
 
 mobileModalBtn.addEventListener('click', () => {
   modal.classList.toggle('is-open');
@@ -29,13 +31,32 @@ modal.addEventListener('click', evt => {
 });
 
 menuBtn.addEventListener('click', () => {
+  isMenuOpen = !isMenuOpen;
   menuList.classList.toggle('is-open');
+
+  if (isMenuOpen) {
+    menuItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add('visible');
+      }, index * 100);
+    });
+  } else {
+    menuItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.remove('visible');
+      }, index * 100);
+    });
+  }
 });
 
 menuList.addEventListener('click', evt => {
   if (evt.target.nodeName !== 'A') {
     return;
   }
+  menuItems.forEach(item => {
+    item.classList.remove('visible');
+  });
+  isMenuOpen = !isMenuOpen;
   menuList.classList.remove('is-open');
 });
 
@@ -93,7 +114,6 @@ function showChangeColorModal(event) {
 
 function changeTheme(event) {
   event.preventDefault();
-  //   console.dir(event.target);
   if (event.target.nodeName !== 'LI') {
     return;
   } else {

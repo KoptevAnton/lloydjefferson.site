@@ -20,6 +20,7 @@ const changeColorBtn = document.querySelector('.change-color-btn');
 const changeColorModal = document.querySelector('.change-color');
 const rootStyle = document.documentElement.style;
 const body = document.body;
+const menuItems = document.querySelectorAll('.menu-item');
 // Work-together
 const formEL = document.querySelector('.footer-form-feedback');
 const emailEL = document.querySelector('.footer-input-email');
@@ -51,6 +52,7 @@ export {
   changeColorModal,
   rootStyle,
   body,
+  menuItems,
   formEL,
   emailEL,
   commentEL,
