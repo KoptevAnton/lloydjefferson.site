@@ -26,29 +26,24 @@ input:-webkit-autofill:active {
   overflow: hidden;
 }
 
-.work-together {
-  position: relative;
-  overflow: hidden;
-}
-
-.footer-container::before {
+.work-together::before {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
   left: 290px;
-  width: 720px;
+  width: 660px;
   height: 100%;
   background: repeating-linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.5) 1px,
-    rgba(0, 0, 0, 0.8) 4px,
-    rgba(0, 0, 0, 0.9) 4px,
-    rgba(0, 0, 0, 0.9) 5px,
-    rgba(0, 0, 0, 0) 72px
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 9px,
+    rgba(0, 0, 0, 1) 23px,
+    rgba(0, 0, 0, 0) 23px,
+    rgba(0, 0, 0, 0) 66px
   );
   pointer-events: none;
-  opacity: 0.08;
+  opacity: 0.05;
   z-index: -1;
 }
 
@@ -204,7 +199,7 @@ input:-webkit-autofill:active {
     padding-bottom: 169px;
   }
 
-  .footer-container::before {
+  .work-together::before {
     left: 570px;
   }
 
@@ -275,7 +270,7 @@ input:-webkit-autofill:active {
     justify-content: center;
   }
 
-  .footer-container::before {
+  .work-together::before {
     left: 1040px;
   }
 

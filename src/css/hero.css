@@ -111,6 +111,54 @@
   }
 }
 
+.logo-lloyd-hero {
+  animation-name: slideInDown;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+  opacity: 100%;
+}
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  40% {
+    opacity: 50%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+h1 .h1-animation {
+  animation-name: slideInDown;
+  opacity: 0%;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+h1 .h1-animation:nth-child(2) {
+  animation-delay: 2s;
+}
+h1 .h1-animation:nth-child(3) {
+  animation-delay: 2.2s;
+}
+h1 .h1-animation:nth-child(4) {
+  animation-delay: 2.4s;
+}
+h1 .h1-animation:nth-child(5) {
+  animation-delay: 2.6s;
+}
+h1 .h1-animation:nth-child(6) {
+  animation-delay: 2.8s;
+}
+h1 .h1-animation:last-child {
+  animation-delay: 3s;
+}
+
 .ul-hero {
   display: flex;
   align-items: center;
@@ -139,16 +187,75 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: #fafafa;
-  transition: transform 300ms ease-in-out, border 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+
+  animation-name: jump;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.li-hero:nth-child(1) {
+  animation-delay: 0s;
+}
+.li-hero:nth-child(2) {
+  animation-delay: 1s;
+}
+.li-hero:nth-child(3) {
+  animation-delay: 2s;
+}
+.li-hero:nth-child(4) {
+  animation-delay: 3s;
+}
+.li-hero:nth-child(5) {
+  animation-delay: 5s;
 }
 
 .li-hero:hover {
   transform: scale(1.04);
-  border: 1px solid #fff;
+  box-shadow: 0 0 2px var(--hover-color), 0 0 4px var(--hover-color),
+    0 0 6px var(--hover-color), 0 0 8px var(--hover-color),
+    0 0 10px var(--hover-color);
 }
 
 .li-hero.li-hero-email {
   width: 178px;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
+  1% {
+    transform: translateY(-1px) scaleX(0.95) scaleY(1);
+  }
+  3.5% {
+    transform: translateY(-5px) scaleX(0.9) scaleY(0.95);
+  }
+  5% {
+    transform: translateY(-7px) scaleX(0.95) scaleY(0.9);
+  }
+
+  7% {
+    transform: translateY(-3px) scaleX(0.9) scaleY(1);
+  }
+  9% {
+    transform: translateY(0px) scaleX(0.9) scaleY(1.07);
+  }
+  11% {
+    transform: translateY(-2px) scaleX(0.95) scaleY(1.09);
+  }
+  13% {
+    transform: translateY(-1px) scaleX(0.97) scaleY(1.06);
+  }
+  13.5% {
+    transform: translateY(-1px) scaleX(0.99) scaleY(1.01);
+  }
+  14% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
+  100% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
 }
 
 .link-hero {
