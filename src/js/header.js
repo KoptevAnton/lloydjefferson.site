@@ -25,6 +25,7 @@ modal.addEventListener('click', evt => {
     return;
   }
   modal.classList.remove('is-open');
+  body.classList.toggle('no-scroll');
 });
 
 menuBtn.addEventListener('click', () => {

@@ -195,7 +195,7 @@
 .btn-aboutswiper-next:focus {
   transform: scale(1.05);
   border: 1px solid #fafafa;
-  background-color: var(--main-color);
+  background-color: var(--hover-color);
   color: #fafafa;
 }
 

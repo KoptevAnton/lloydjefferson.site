@@ -163,7 +163,7 @@
 
 .link-hero:focus {
   transform: scale(1.4);
-  color: rgba(224, 55, 63, 1);
+  color: var(--hover-color);
 }
 
 .link-hero-email {
@@ -176,7 +176,7 @@
 }
 
 .link-hero-email:focus {
-  color: rgba(224, 55, 63, 1);
+  color: var(--hover-color);
   transform: scale(1.1);
 }
 

@@ -134,6 +134,15 @@
   height: 28px;
 }
 
+.mobile-menu-btn:focus .open-menu-mob-icon {
+  stroke: var(--hover-color);
+  transform: scale(1.15);
+}
+.open-menu-mob-icon {
+  stroke: #fafafa;
+  transition: all 300ms ease-in-out;
+}
+
 .open-menu-mob {
   width: 28px;
   height: 28px;
@@ -204,6 +213,11 @@
   border: none;
 }
 
+.close-menu-btn:focus .close-icon {
+  transform: scale(1.05);
+  stroke: var(--hover-color);
+}
+
 .close-menu {
   stroke-width: 2px;
   width: 28px;
@@ -212,6 +226,7 @@
 }
 
 .close-icon {
+  transition: all 300ms ease-in-out;
   z-index: 3;
 }
 
@@ -235,6 +250,19 @@
 
 .menu-link {
   display: flex;
+  transition: all 300ms ease-in-out;
+}
+
+.menu-link:focus {
+  transform: scale(1.05);
+  color: var(--main-color);
+}
+
+.order:focus {
+  background-color: var(--hover-color);
+  outline: 1px solid #fafafa;
+  box-shadow: -1px -1px 4px var(--hover-color), 1px 1px 6px var(--hover-color);
+  transform: translateY(-2px);
 }
 
 .order {
@@ -249,6 +277,7 @@
   padding: 14px 31px;
   border: none;
   background-color: var(--main-color);
+  transition: all 300ms ease-in-out;
 }
 
 @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
@@ -288,6 +317,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .logo:hover {
+    transform: scale(1.05);
+    color: var(--hover-color);
+  }
+
   .header {
     max-width: 768px;
   }
@@ -333,7 +367,7 @@
 
   .menu-item {
     text-decoration: none;
-    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .menu-link {
@@ -341,6 +375,7 @@
   }
 
   .menu-item:hover {
+    transform: scale(1.05);
     color: var(--main-color);
   }
 
@@ -355,12 +390,15 @@
     border: none;
     line-height: 1.2;
     background-color: var(--main-color);
-    transition: backround-color 300ms ease-in-out, transform 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
   }
 
-  .order-btn:hover {
+  .order-btn:hover,
+  .order-btn:focus {
     background-color: var(--hover-color);
-    transform: scale(1.05);
+    outline: 1px solid #fafafa;
+    box-shadow: -1px -1px 4px var(--hover-color), 1px 1px 6px var(--hover-color);
+    transform: translateY(3px);
   }
 }
 
@@ -369,18 +407,19 @@
   transition: transform 300ms ease-in, color 300ms ease-in;
 }
 
-.logo:hover {
-  color: var(--main-color);
+.logo:focus {
   transform: scale(1.05);
+  color: var(--hover-color);
 }
 
 .menu-btn {
-  transition: color 300ms ease-in-out, transform 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 
-.menu-btn:hover {
+.menu-btn:hover,
+.menu-btn:focus {
+  transform: scale(1.15);
   color: var(--hover-color);
-  transform: scale(1.1);
 }
 
 @media screen and (min-width: 1440px) {
