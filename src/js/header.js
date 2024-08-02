@@ -94,7 +94,9 @@ const themes = {
 };
 
 const savedTheme = JSON.parse(localStorage.getItem('savedTheme'));
-if (savedTheme) {
+if (savedTheme && savedTheme !== 'red') {
+  // If we have some saved theme, but not Red, because
+  // Red theme is set by default, so no need to rewrite colors
   const newMainColor = themes[savedTheme].mainColor;
   const newHoverColor = themes[savedTheme].hoverColor;
   const newMiddleColor = themes[savedTheme].middleColor;
@@ -114,9 +116,9 @@ function showChangeColorModal(event) {
 
 function changeTheme(event) {
   event.preventDefault();
-  if (event.target.nodeName !== 'LI') {
-    return;
-  } else {
+  if (event.target.nodeName === 'LI') {
+    // If user clicked on color, change theme, save in
+    // LocalStorage, remove listener and close the Modal
     const selectedTheme = event.target.dataset.theme;
     const newMainColor = themes[selectedTheme].mainColor;
     const newHoverColor = themes[selectedTheme].hoverColor;
@@ -125,6 +127,11 @@ function changeTheme(event) {
     rootStyle.setProperty('--main-color', newMainColor);
     rootStyle.setProperty('--hover-color', newHoverColor);
     rootStyle.setProperty('--middle-color', newMiddleColor);
+    changeColorModal.removeEventListener('click', changeTheme);
+    changeColorModal.classList.remove('is-open');
+  } else {
+    // If user clicked somewhere else, but not on color, just
+    // close this modal and remove listener
     changeColorModal.removeEventListener('click', changeTheme);
     changeColorModal.classList.remove('is-open');
   }
