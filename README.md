@@ -7,15 +7,15 @@ Developer, частина JavaScript, група №5
 
 Учасники проєкту:
 
-- **Team Lead** - Антон Коптєв
-- **Scrum Master** - Сергій Решетняк
-- Артем Кандиба
-- Вадим Котляров
-- Ксенія Борисова
-- Олександр Стельмах
-- Тетяна Дубовик
-- Юлія Боіштян
-- Юлія Дмитрук
+- **Team Lead** - [Антон Коптєв](https://github.com/KoptevAnton)
+- **Scrum Master** - [Сергій Решетняк](https://github.com/ReshetS)
+- [Артем Кандиба](https://github.com/kandyy9)
+- [Вадим Котляров](https://github.com/Rourkes)
+- [Ксенія Борисова](https://github.com/Kseniya-Igorivna)
+- [Олександр Стельмах](https://github.com/alex-stelmakh)
+- [Тетяна Дубовик](https://github.com/TetianaDubovyk1)
+- [Юлія Боіштян](https://github.com/Juliia-Boi)
+- [Юлія Дмитрук](https://github.com/julia-dm)
 
 ## Інформація для розробників
 
