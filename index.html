@@ -166,13 +166,43 @@
         </h3>
       </li>
       <li class="aboutme-header-list photo">
-        <img
-          srcset="/assets/Jefferson-photo-x1-639d48b2.jpg 1x, /assets/Jefferson-photo-x2-96c224a1.jpg 2x, /assets/Jefferson-photo-x3-b575b843.jpg 3x"
-          src="/assets/Jefferson-photo-x1-639d48b2.jpg"
-          alt="Lloyd Jefferson"
-          class="about-me-img"
-          loading="lazy"
-        />
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="/assets/photo-desktop-63325dfd.webp 1x, /assets/photo-desktop@2x-43757712.webp 2x, /assets/photo-desktop@3x-194bfa77.webp 3x"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1440px)"
+            srcset="/assets/photo-desktop-50b5366e.jpg 1x, /assets/photo-desktop@2x-2f7b60cf.jpg 2x, /assets/photo-desktop@3x-f696644d.jpg 3x"
+            type="image/jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/assets/photo-tablet-8ebef512.webp 1x, /assets/photo-tablet@2x-47859481.webp 2x, /assets/photo-tablet@3x-b3e9e3b0.webp 3x"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/assets/photo-tablet-006ed061.jpg 1x, /assets/photo-tablet@2x-add1c9ab.jpg 2x, /assets/photo-tablet@3x-13db2d2c.jpg 3x"
+            type="image/jpg"
+          />
+          <source
+            srcset="/assets/photo-mobile-1f9bddda.webp 1x, /assets/photo-mobile@2x-0cc4dda4.webp 2x, /assets/photo-mobile@3x-caa1bc9c.webp 3x"
+            type="image/webp"
+          />
+          <source
+            srcset="/assets/photo-mobile-94d5b47a.jpg 1x, /assets/photo-mobile@2x-4c68a243.jpg 2x, /assets/photo-mobile@3x-35b80f3f.jpg 3x"
+            type="image/jpg"
+          />
+          <img
+            src="/assets/photo-desktop-50b5366e.jpg"
+            alt="Lloyd Jefferson"
+            class="about-me-img"
+            data-name="lloyd-jefferson"
+            loading="lazy"
+          />
+        </picture>
       </li>
     </ul>
     <ul class="aboutme-accordion-container">
