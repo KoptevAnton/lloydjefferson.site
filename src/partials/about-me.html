@@ -13,25 +13,59 @@
       <li class="aboutme-header-list photo">
         <picture>
           <source
-            media="(min-width: 768px)"
+            media="(min-width: 1440px)"
             srcset="
-              ./img/about-me/Jefferson-photo-x1.jpg 1x,
-              ./img/about-me/Jefferson-photo-x2.jpg 2x,
-              ./img/about-me/Jefferson-photo-x3.jpg 3x
+              ./img/about-me/photo-desktop.webp    1x,
+              ./img/about-me/photo-desktop@2x.webp 2x,
+              ./img/about-me/photo-desktop@3x.webp 3x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1440px)"
+            srcset="
+              ./img/about-me/photo-desktop.jpg    1x,
+              ./img/about-me/photo-desktop@2x.jpg 2x,
+              ./img/about-me/photo-desktop@3x.jpg 3x
             "
             type="image/jpg"
           />
           <source
-            media="(max-width: 767px)"
+            media="(min-width: 768px)"
             srcset="
-              ./img/about-me/Jefferson-photo-mob-x1.webp 1x,
-              ./img/about-me/Jefferson-photo-mob-x2.webp 2x,
-              ./img/about-me/Jefferson-photo-mob-x3.webp 3x
+              ./img/about-me/photo-tablet.webp    1x,
+              ./img/about-me/photo-tablet@2x.webp 2x,
+              ./img/about-me/photo-tablet@3x.webp 3x
             "
             type="image/webp"
           />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./img/about-me/photo-tablet.jpg    1x,
+              ./img/about-me/photo-tablet@2x.jpg 2x,
+              ./img/about-me/photo-tablet@3x.jpg 3x
+            "
+            type="image/jpg"
+          />
+          <source
+            srcset="
+              ./img/about-me/photo-mobile.webp    1x,
+              ./img/about-me/photo-mobile@2x.webp 2x,
+              ./img/about-me/photo-mobile@3x.webp 3x
+            "
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./img/about-me/photo-mobile.jpg    1x,
+              ./img/about-me/photo-mobile@2x.jpg 2x,
+              ./img/about-me/photo-mobile@3x.jpg 3x
+            "
+            type="image/jpg"
+          />
           <img
-            src="./img/about-me/Jefferson-photo-x1.jpg"
+            src="./img/about-me/photo-desktop.jpg"
             alt="Lloyd Jefferson"
             class="about-me-img"
             data-name="lloyd-jefferson"
