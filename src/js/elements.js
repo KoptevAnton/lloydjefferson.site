@@ -18,6 +18,7 @@ const menuBtn = document.querySelector('.menu-btn');
 const menuList = document.querySelector('.menu-list');
 const changeColorBtn = document.querySelector('.change-color-btn');
 const changeColorModal = document.querySelector('.change-color-wrapper');
+const changeColorList = document.querySelector('.change-color');
 const rootStyle = document.documentElement.style;
 const body = document.body;
 const menuItems = document.querySelectorAll('.menu-item');
@@ -50,6 +51,7 @@ export {
   menuList,
   changeColorBtn,
   changeColorModal,
+  changeColorList,
   rootStyle,
   body,
   menuItems,

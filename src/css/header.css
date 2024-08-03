@@ -36,6 +36,43 @@
   display: none;
 }
 
+/*change color theme*/
+.change-color-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+}
+
+.change-color-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+  text-decoration: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 14px;
+  outline: none;
+  background-color: var(--main-color);
+  transition: all 300ms ease-in-out;
+}
+
+.change-color-btn:hover,
+.change-color-btn:focus {
+  background-color: var(--hover-color);
+  outline: 1px solid #fff;
+  transform: scale(1.1);
+}
+
 .change-color-wrapper {
   position: fixed;
   top: 0;
@@ -51,64 +88,49 @@
 }
 
 .change-color {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: auto;
+  position: absolute;
   display: block;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  z-index: 999;
+  transform: translate(82%, 0%);
+  right: 0px;
   bottom: 15px;
-  width: 160px;
-  height: 104px;
+  transition: all 300ms ease-in-out;
 }
 
-.change-color-button-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 99;
-}
-
-.change-color-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 0;
-  font-size: 12px;
-  text-decoration: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 60px;
-  border: 1px solid rgba(250, 250, 250, 0.5);
-  text-align: center;
-  padding: 14px;
-  border: none;
-  background-color: var(--main-color);
-  transition: background-color 300ms ease-in-out, transform 300ms ease-in-out,
-    border 300ms ease-in-out;
-}
-
-.change-color-btn:hover,
-.change-color-btn:focus {
-  background-color: var(--hover-color);
-  border: 1px solid #fff;
-  transform: scale(1.1);
+.is-open-change-color {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  right: 50%;
+  transform: translate(50%, 0%);
+  bottom: 79px;
 }
 
 .theme-colors {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 1px;
+  min-width: 116px;
+  gap: 12px;
 }
 
 .color-option {
-  flex-basis: 48px;
-  height: 48px;
-  border-radius: 50px;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  transition: all 300ms ease-in-out;
+}
+
+.color-option:hover,
+.color-option:focus {
+  transform: scale(1.2);
+  box-shadow: 0 0 2px var(--hover-color), 0 0 4px var(--hover-color),
+    0 0 6px var(--hover-color), 0 0 8px var(--hover-color),
+    0 0 10px var(--hover-color);
 }
 
 .red-theme-option {
@@ -332,24 +354,27 @@
 
 @media screen and (min-width: 768px) {
   .change-color {
-    width: 176px;
-    height: 117px;
+    transform: translate(84%, 0%);
+  }
+
+  .is-open-change-color {
+    transform: translate(50%, 0);
+    bottom: 103px;
+  }
+
+  .theme-colors {
+    gap: 20px;
   }
 
   .color-option {
-    flex-basis: 58px;
-    height: 58px;
+    width: 68px;
+    height: 68px;
   }
 
   .change-color-btn {
     font-size: 16px;
-    width: 75px;
-    height: 75px;
-  }
-
-  .change-color-button-wrapper {
-    bottom: 10px;
-    right: 10px;
+    width: 68px;
+    height: 68px;
   }
 
   .logo:hover {
@@ -394,7 +419,8 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), visibility 0ms linear 300ms;
+    transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0ms linear 300ms;
   }
 
   .menu-list.is-open {
@@ -467,24 +493,28 @@
 
 @media screen and (min-width: 1440px) {
   .change-color {
-    width: 206px;
-    height: 137px;
+    transform: translate(83%, -4%);
+  }
+
+  .is-open-change-color {
+    transform: translate(50%, 0);
+    bottom: 140px;
   }
 
   .color-option {
-    flex-basis: 68px;
-    height: 68px;
+    width: 100px;
+    height: 100px;
   }
 
   .change-color-btn {
-    font-size: 18px;
-    width: 95px;
-    height: 95px;
+    font-size: 22px;
+    width: 100px;
+    height: 100px;
   }
 
   .change-color-button-wrapper {
-    bottom: 15px;
-    right: 15px;
+    bottom: 20px;
+    right: 20px;
   }
 
   .header {

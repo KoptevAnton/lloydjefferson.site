@@ -6,6 +6,7 @@ import {
   menuList,
   changeColorBtn,
   changeColorModal,
+  changeColorList,
   rootStyle,
   body,
   menuItems,
@@ -111,6 +112,7 @@ changeColorBtn.addEventListener('click', showChangeColorModal);
 function showChangeColorModal(event) {
   event.preventDefault();
   changeColorModal.classList.add('is-open');
+  changeColorList.classList.add('is-open-change-color');
   changeColorModal.addEventListener('click', changeTheme);
 }
 
@@ -134,5 +136,6 @@ function changeTheme(event) {
     // close this modal and remove listener
     changeColorModal.removeEventListener('click', changeTheme);
     changeColorModal.classList.remove('is-open');
+    changeColorList.classList.remove('is-open-change-color');
   }
 }
