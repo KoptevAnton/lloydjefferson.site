@@ -63,3 +63,7 @@
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
+
+body.no-scroll {
+  overflow: hidden;
+}

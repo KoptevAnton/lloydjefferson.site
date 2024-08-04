@@ -112,6 +112,7 @@ changeColorBtn.addEventListener('click', showChangeColorModal);
 function showChangeColorModal(event) {
   event.preventDefault();
   changeColorModal.classList.add('is-open');
+  document.body.classList.add('no-scroll');
   changeColorList.classList.add('is-open-change-color');
   changeColorModal.addEventListener('click', changeTheme);
 }
@@ -131,11 +132,13 @@ function changeTheme(event) {
     rootStyle.setProperty('--middle-color', newMiddleColor);
     changeColorModal.removeEventListener('click', changeTheme);
     changeColorModal.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
   } else {
     // If user clicked somewhere else, but not on color, just
     // close this modal and remove listener
     changeColorModal.removeEventListener('click', changeTheme);
     changeColorModal.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
     changeColorList.classList.remove('is-open-change-color');
   }
 }
