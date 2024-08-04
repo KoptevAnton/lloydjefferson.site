@@ -37,9 +37,9 @@
 }
 
 .title-list:hover {
-  text-shadow: 0 0 2px var(--hover-color), 0 0 4px var(--hover-color),
-    0 0 6px var(--hover-color), 0 0 8px var(--hover-color),
-    0 0 10px var(--hover-color);
+  text-shadow: 0 4px 3px rgba(250, 250, 250, 0.2),
+    0 4px 4px rgba(250, 250, 250, 0.2), 0 4px 6px rgba(250, 250, 250, 0.2),
+    0 4px 8px rgba(250, 250, 250, 0.2), 0 4px 11px rgba(250, 250, 250, 0.2);
 }
 
 .title-list:hover .toggle-btn {
