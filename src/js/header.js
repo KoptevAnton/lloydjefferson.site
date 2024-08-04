@@ -132,6 +132,7 @@ function changeTheme(event) {
     rootStyle.setProperty('--middle-color', newMiddleColor);
     changeColorModal.removeEventListener('click', changeTheme);
     changeColorModal.classList.remove('is-open');
+    changeColorList.classList.remove('is-open-change-color');
     document.body.classList.remove('no-scroll');
   } else {
     // If user clicked somewhere else, but not on color, just
