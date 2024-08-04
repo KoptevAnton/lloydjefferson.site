@@ -29,24 +29,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  left: -16px;
-  border-radius: 25px;
-  padding-left: 16px;
   font-size: 20px;
   font-weight: 600;
   min-width: 265px;
   cursor: pointer;
-  transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .title-list:hover {
-  box-shadow: 6px 6px 25px rgba(255, 255, 255, 0.5),
-    10px 10px 15px rgba(70, 70, 70, 0.12);
+  text-shadow: 0 0 2px var(--hover-color), 0 0 4px var(--hover-color),
+    0 0 6px var(--hover-color), 0 0 8px var(--hover-color),
+    0 0 10px var(--hover-color);
 }
 
 .title-list:hover .toggle-btn {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
 }
 
 .text-faq {
@@ -103,10 +100,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .title-list {
-    border-radius: 50px;
-  }
-
   .faq {
     margin-bottom: 96px;
   }
