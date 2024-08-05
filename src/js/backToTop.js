@@ -1,7 +1,7 @@
 import { btnTop } from './elements.js';
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 40) {
     btnTop.classList.add('show');
   } else {
     btnTop.classList.remove('show');
