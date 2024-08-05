@@ -4,7 +4,7 @@
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
-  height: 92px;
+  height: 76px;
   transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -393,7 +393,7 @@
   }
 
   .header {
-    height: 119px;
+    height: 103px;
   }
 
   .modal {
@@ -425,6 +425,7 @@
 
   .menu-list-scroll {
     flex-direction: row;
+    gap: 20px;
   }
 
   .menu {
@@ -435,7 +436,8 @@
 
   .menu-scroll {
     display: flex;
-    transform: translate(-80%, 0%);
+    gap: 32px;
+    transform: translate(-53%, 0%);
   }
 
   .menu-list.is-open {
@@ -528,7 +530,7 @@
   }
 
   .menu-scroll {
-    transform: translate(-200%, 0%);
+    transform: translate(-147%, 0%);
   }
 }
 
