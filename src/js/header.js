@@ -14,12 +14,12 @@ import {
 let isMenuOpen = false;
 
 mobileModalBtn.addEventListener('click', () => {
-  modal.classList.toggle('is-open');
+  modal.classList.toggle('is-open-modal');
   body.classList.toggle('no-scroll');
 });
 
 closeModalBtn.addEventListener('click', () => {
-  modal.classList.remove('is-open');
+  modal.classList.remove('is-open-modal');
   body.classList.toggle('no-scroll');
 });
 
@@ -27,7 +27,7 @@ modal.addEventListener('click', evt => {
   if (evt.target.nodeName !== 'A') {
     return;
   }
-  modal.classList.remove('is-open');
+  modal.classList.remove('is-open-modal');
   body.classList.toggle('no-scroll');
 });
 
