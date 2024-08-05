@@ -143,3 +143,11 @@ function changeTheme(event) {
     changeColorList.classList.remove('is-open-change-color');
   }
 }
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    changeColorModal.classList.remove('is-open');
+    changeColorList.classList.remove('is-open-change-color');
+    document.body.classList.remove('no-scroll');
+  }
+});
