@@ -7,3 +7,4 @@ import './js/swagger-api.js';
 import './js/backToTop.js';
 import './js/about-me.js';
 import './js/faq.js';
+import './js/header-scroll.js';

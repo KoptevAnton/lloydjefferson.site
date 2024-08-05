@@ -11,6 +11,9 @@ const coversBackground = document.querySelector('.covers-background');
 const coversWrapper = document.querySelector('.covers-wrapper');
 
 //header
+const headerEl = document.querySelector('.header');
+const logoWrapperEl = document.querySelector('.logo-wrapper');
+const menuEl = document.querySelector('.menu');
 const mobileModalBtn = document.querySelector('.mobile-menu-btn');
 const modal = document.querySelector('.modal');
 const closeModalBtn = document.querySelector('.close-menu-btn');
@@ -44,6 +47,9 @@ export {
   coversSection,
   coversBackground,
   coversWrapper,
+  headerEl,
+  logoWrapperEl,
+  menuEl,
   mobileModalBtn,
   modal,
   closeModalBtn,
