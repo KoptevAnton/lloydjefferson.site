@@ -63,7 +63,14 @@ aboutmeAccordionTriggers.forEach(accordionTrigger => {
   });
 });
 
+// Ініціалізація акордеону
 createAccordion(options);
+
+// Видалення атрибута role="button" з елементів h3
+const headers = document.querySelectorAll('.aboutme-accordion-container h3');
+headers.forEach(header => {
+  header.removeAttribute('role');
+});
 
 Swiper.use([Navigation, Keyboard]);
 
