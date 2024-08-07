@@ -64,32 +64,32 @@ menuList.addEventListener('click', evt => {
 const themes = {
   red: {
     mainColor: '#ed3b44',
-    hoverColor: '#e0373f',
+    hoverColor: '#991017',
     middleColor: '#69292d',
   },
   lime: {
-    mainColor: '#c6e327',
-    hoverColor: '#b3d11f',
+    mainColor: '#677908',
+    hoverColor: '#495607',
     middleColor: '#596808',
   },
   blue: {
-    mainColor: '#0041e8',
+    mainColor: '#3368F1',
     hoverColor: '#0a3dca',
     middleColor: '#001958',
   },
   pink: {
-    mainColor: '#e6533c',
-    hoverColor: '#d24e39',
+    mainColor: '#C61EA4',
+    hoverColor: '#9B1480',
     middleColor: '#9f3626',
   },
   aquamarine: {
-    mainColor: '#2b4441',
+    mainColor: '#417D77',
     hoverColor: '#31524f',
     middleColor: '#1e3633',
   },
   orange: {
-    mainColor: '#ff7f08',
-    hoverColor: '#e87809',
+    mainColor: '#A56326',
+    hoverColor: '#88511E',
     middleColor: '#ac5300',
   },
 };
