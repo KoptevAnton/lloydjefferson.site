@@ -13,10 +13,10 @@
     <script type="module" crossorigin src="/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-6cc0d0f2.js">
     <link rel="stylesheet" href="/assets/vendor-32f6f024.css">
-    <link rel="stylesheet" href="/assets/index-a8d1103c.css">
+    <link rel="stylesheet" href="/assets/index-ed1d759a.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header fixed">
   <div class="header-content-wrap container">
     <div class="logo-wrapper">
       <a href="./index.html" class="logo">
@@ -25,6 +25,8 @@
           src="./img/logo.jpg"
           class="logo-img"
           alt="Lloyd Jefferson"
+          width="60"
+          height="60"
         />
         <span class="logo-text">jefferson&ast;</span>
       </a>
@@ -1453,14 +1455,16 @@
           </li>
         </ul>
       </address>
-      <button type="button" class="btnToTop" aria-label="Scroll to top">
-        <svg class="toTopImg" width="30" height="30">
-          <use href="/assets/icons-1527bb08.svg#collapse"></use>
-        </svg>
-      </button>
+      <div class="btnToTop-wrapper fixed">
+        <button type="button" class="btnToTop" aria-label="Scroll to top">
+          <svg class="toTopImg" width="40" height="40">
+            <use href="/assets/icons-1527bb08.svg#collapse"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
-  <div class="change-color-button-wrapper">
+  <div class="change-color-button-wrapper fixed">
     <button
       type="button"
       class="change-color-btn"
