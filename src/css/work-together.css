@@ -63,6 +63,9 @@ input:-webkit-autofill:active {
 
 .footer-title,
 .footer-title-elem {
+  @media screen and (max-width: 320px) {
+    font-size: 30px;
+  }
   font-size: 40px;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -392,17 +395,20 @@ input:-webkit-autofill:active {
   }
 }
 /* -----------btnToTop----------- */
+.btnToTop-wrapper {
+  z-index: 99;
+  position: fixed;
+  bottom: 79px;
+  right: 15px;
+}
+
 .btnToTop {
   display: none;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  bottom: 79px;
-  right: 15px;
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  z-index: 99;
   cursor: pointer;
   padding: 0;
   background-color: var(--main-color);
@@ -427,15 +433,14 @@ input:-webkit-autofill:active {
   stroke: #ffffff;
 }
 
-.btnToTop.show {
-  display: block;
-}
-
 /* tablet */
 @media screen and (min-width: 768px) {
   .btnToTop {
     width: 68px;
     height: 68px;
+  }
+
+  .btnToTop-wrapper {
     bottom: 103px;
   }
 }
@@ -444,6 +449,8 @@ input:-webkit-autofill:active {
   .btnToTop {
     width: 100px;
     height: 100px;
+  }
+  .btnToTop-wrapper {
     bottom: 140px;
     right: 20px;
   }

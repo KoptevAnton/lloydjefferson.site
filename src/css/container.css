@@ -1,9 +1,9 @@
 .container {
   min-width: 270px;
   max-width: 375px;
-
   padding: 0 16px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .section-margin {
   margin-bottom: 64px;

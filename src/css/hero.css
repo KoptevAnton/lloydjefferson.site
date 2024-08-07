@@ -79,6 +79,9 @@
 }
 
 .logo-lloyd-hero {
+  @media only screen and (max-width: 320px) {
+    font-size: 30px;
+  }
   max-width: 343px;
   margin-bottom: 212px;
   font-family: 'Inter Tight', sans-serif;
