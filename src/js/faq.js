@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const faqItems = document.querySelectorAll('.list-faq');
+import { faqItems } from './elements.js';
 
+document.addEventListener('DOMContentLoaded', () => {
   faqItems.forEach(item => {
     const question = item.querySelector('.title-list');
     const toggleBtn = item.querySelector('.toggle-btn');

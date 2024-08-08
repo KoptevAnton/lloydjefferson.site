@@ -38,7 +38,7 @@ const btnTop = document.querySelector('.btnToTop');
 const aboutmeAccordion = document.querySelector('.aboutme-accordion-container');
 const nextSlideBtn = document.querySelector('.btn-aboutswiper-next');
 // faq
-const faqItems = document.querySelectorAll('.faq-list-ul');
+const faqItems = document.querySelectorAll('.list-faq');
 export {
   prevButtonEl,
   nextButtonEl,
