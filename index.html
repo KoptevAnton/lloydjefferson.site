@@ -9,8 +9,148 @@
       name="description"
       content="This is a project by Team Intime (students of Group 5 at GoIT school). We created a portfolio for Lloyd Jefferson."
     />
+    <style>
+      /* container */
+      .container {
+        min-width: 270px;
+        max-width: 375px;
+        padding: 0 16px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      .section-margin {
+        margin-bottom: 64px;
+      }
+
+      /* tablet */
+      @media screen and (min-width: 768px) {
+        .container {
+          max-width: none;
+          width: 768px;
+          padding: 0 32px;
+        }
+        .section-margin {
+          margin-bottom: 96px;
+        }
+      }
+      /* desktop */
+      @media screen and (min-width: 1440px) {
+        .container {
+          width: 1440px;
+        }
+        .section-margin {
+          margin-bottom: 164px;
+        }
+      }
+      /* hero */
+      .section-hero {
+        min-height: 812px;
+        display: flex;
+        align-items: flex-end;
+        background: linear-gradient(
+          to right,
+          var(--main-color),
+          var(--middle-color) 32%,
+          #1c1d20 50%,
+          #1c1d20 100%
+        );
+        position: relative;
+        overflow: hidden;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        margin-bottom: 64px;
+      }
+
+      .section-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -210px;
+        width: 520px;
+        height: 100%;
+        background: repeating-linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5) 1px,
+          rgba(0, 0, 0, 0.8) 5px,
+          rgba(0, 0, 0, 0.9) 5px,
+          rgba(0, 0, 0, 0.9) 6px,
+          rgba(0, 0, 0, 0) 52px
+        );
+        pointer-events: none;
+        opacity: 0.2;
+      }
+
+      .section-hero.container {
+        width: 100%;
+        max-width: none;
+      }
+      @media only screen and (min-width: 768px) {
+        .section-hero {
+          min-height: 1024px;
+          padding-top: 32px;
+          padding-bottom: 32px;
+        }
+
+        .section-hero::before {
+          left: -143px;
+          width: 720px;
+          background: repeating-linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5) 1px,
+            rgba(0, 0, 0, 0.8) 11px,
+            rgba(0, 0, 0, 0.9) 11px,
+            rgba(0, 0, 0, 0.9) 12px,
+            rgba(0, 0, 0, 0) 72px
+          );
+        }
+      }
+      @media only screen and (min-width: 1440px) {
+        .section-hero {
+          padding-bottom: 32px;
+          padding-top: 32px;
+          min-height: 900px;
+          margin-bottom: 96px;
+        }
+
+        .section-hero::before {
+          left: -6px;
+        }
+        .section-hero.container {
+          max-width: 1440px;
+          padding: 0;
+        }
+      }
+      /* header */
+      .header {
+        z-index: 2;
+        position: fixed;
+        width: 100%;
+        padding-top: 32px;
+        height: 76px;
+        transition: max-width 0.3s ease;
+      }
+
+      .header-bg {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .header-content-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 100%;
+      }
+
+      @media screen and (min-width: 768px) {
+        .header {
+          height: 89px;
+        }
+      }
+    </style>
     
-    <script type="module" crossorigin src="/commonHelpers.js"></script>
+    <script async type="module" crossorigin src="/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-6cc0d0f2.js">
     <link rel="stylesheet" href="/assets/vendor-32f6f024.css">
     <link rel="stylesheet" href="/assets/index-ed1d759a.css">
