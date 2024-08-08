@@ -60,7 +60,6 @@
         padding-bottom: 32px;
         margin-bottom: 64px;
       }
-
       .section-hero::before {
         content: '';
         position: absolute;
@@ -80,18 +79,22 @@
         pointer-events: none;
         opacity: 0.2;
       }
-
       .section-hero.container {
         width: 100%;
         max-width: none;
       }
       @media only screen and (min-width: 768px) {
+        .logo-lloyd-hero {
+          max-width: 632px;
+          font-size: 90px;
+          line-height: 1;
+          margin-bottom: 187px;
+        }
         .section-hero {
           min-height: 1024px;
           padding-top: 32px;
           padding-bottom: 32px;
         }
-
         .section-hero::before {
           left: -143px;
           width: 720px;
@@ -106,6 +109,7 @@
           );
         }
       }
+
       @media only screen and (min-width: 1440px) {
         .section-hero {
           padding-bottom: 32px;
