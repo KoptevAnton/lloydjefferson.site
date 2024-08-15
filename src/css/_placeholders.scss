@@ -1,0 +1,22 @@
+%margin-horizontal-centered {
+  margin: 0 auto;
+}
+
+%flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%grid-centered {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+%absolutely-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -26,5 +26,16 @@ export default defineConfig(({ command }) => {
       outDir: '../dist',
     },
     plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
+    optimizeDeps: {
+      include: [
+        'accordion-js',
+        'axios',
+        'basiclightbox',
+        'izitoast',
+        'swiper',
+        'vite-plugin-full-reload',
+        'vite-plugin-html-inject',
+      ],
+    },
   };
 });

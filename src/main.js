@@ -9,3 +9,4 @@ import './js/about-me.js';
 import './js/faq.js';
 import './js/header-scroll.js';
 import './js/fix-scroll.js';
+import './css/styles.scss';

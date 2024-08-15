@@ -8,7 +8,7 @@ Swiper.use([Navigation, Keyboard]);
 new Swiper('.projects__swiper-container', {
   keyboard: {
     enabled: true,
-    onlyInViewport: false,
+    onlyInViewport: true,
   },
   direction: 'horizontal',
   slidesPerView: 1,
