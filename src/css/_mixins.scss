@@ -1,0 +1,27 @@
+@mixin set-font-s-w-lh-ls-c(
+  $size: null,
+  $weight: null,
+  $height: null,
+  $letter-spacing: null,
+  $color: null
+) {
+  @if $size != null {
+    font-size: $size;
+  }
+
+  @if $weight != null {
+    font-weight: $weight;
+  }
+
+  @if $height != null {
+    line-height: $height;
+  }
+
+  @if $letter-spacing != null {
+    letter-spacing: $letter-spacing;
+  }
+
+  @if $color != null {
+    color: $color;
+  }
+}
